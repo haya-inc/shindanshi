@@ -1,0 +1,155 @@
+{
+  "updatedAt": "2026-03-26",
+  "timezone": "Asia/Tokyo",
+  "entries": [
+    {
+      "route": "/docs/first-stage",
+      "docPath": "content/docs/first-stage/index.mdx",
+      "reviewWindowDays": 180,
+      "lastReviewedAt": "2026-03-26",
+      "sourceUrls": [
+        "https://www.jf-cmca.jp/attach/test/r07/r07_1ji_annai.pdf",
+        "https://www.jf-cmca.jp/contents/010_c_/010_c_r07_shiken/R07_nittei.html"
+      ]
+    },
+    {
+      "route": "/docs/second-stage",
+      "docPath": "content/docs/second-stage/index.mdx",
+      "reviewWindowDays": 90,
+      "lastReviewedAt": "2026-03-26",
+      "sourceUrls": [
+        "https://www.jf-cmca.jp/attach/test/r07/r07_2ji_annai.pdf",
+        "https://www.jf-cmca.jp/contents/010_c_/010_c_r07_shiken/R08_jyukentesuryokaitei_koujyutushikenhaishi.html"
+      ]
+    },
+    {
+      "route": "/docs/second-stage/overview",
+      "docPath": "content/docs/second-stage/overview.mdx",
+      "reviewWindowDays": 90,
+      "lastReviewedAt": "2026-03-26",
+      "sourceUrls": [
+        "https://www.jf-cmca.jp/attach/test/r07/r07_2ji_annai.pdf",
+        "https://www.jf-cmca.jp/contents/010_c_/010_c_r07_shiken/R08_jyukentesuryokaitei_koujyutushikenhaishi.html"
+      ]
+    },
+    {
+      "route": "/docs/reference/exam-guide",
+      "docPath": "content/docs/reference/exam-guide.mdx",
+      "reviewWindowDays": 90,
+      "lastReviewedAt": "2026-03-26",
+      "sourceUrls": [
+        "https://www.jf-cmca.jp/contents/007_shiken.html",
+        "https://www.jf-cmca.jp/contents/010_c_/010_c_r07_shiken/R08_jyukentesuryokaitei_koujyutushikenhaishi.html",
+        "https://www.jf-cmca.jp/contents/010_c_/010_c_r07_shiken/R07_nittei.html"
+      ]
+    },
+    {
+      "route": "/docs/first-stage/business-law",
+      "docPath": "content/docs/first-stage/business-law/index.mdx",
+      "reviewWindowDays": 180,
+      "lastReviewedAt": "2026-03-26",
+      "sourceUrls": [
+        "https://www.moj.go.jp/MINJI/minji07_00252.html",
+        "https://www.jpo.go.jp/system/trademark/gaiyo/consent/index.html",
+        "https://www.ppc.go.jp/files/pdf/250324_guidelines01.pdf"
+      ]
+    },
+    {
+      "route": "/docs/first-stage/business-law/company-law",
+      "docPath": "content/docs/first-stage/business-law/company-law.mdx",
+      "reviewWindowDays": 180,
+      "lastReviewedAt": "2026-03-26",
+      "sourceUrls": [
+        "https://www.moj.go.jp/MINJI/minji07_00252.html",
+        "https://www.moj.go.jp/content/001399960.pdf"
+      ]
+    },
+    {
+      "route": "/docs/first-stage/business-law/intellectual-property",
+      "docPath": "content/docs/first-stage/business-law/intellectual-property.mdx",
+      "reviewWindowDays": 180,
+      "lastReviewedAt": "2026-03-26",
+      "sourceUrls": [
+        "https://www.jpo.go.jp/system/trademark/gaiyo/consent/index.html",
+        "https://www.jpo.go.jp/system/design/shutugan/tetuzuki/ishou-reigai-tetsuduki/index.html",
+        "https://www.bunka.go.jp/seisaku/chosakuken/seidokaisetsu/pdf/94283401_01.pdf"
+      ]
+    },
+    {
+      "route": "/docs/first-stage/business-law/civil-and-transaction-law",
+      "docPath": "content/docs/first-stage/business-law/civil-and-transaction-law.mdx",
+      "reviewWindowDays": 180,
+      "lastReviewedAt": "2026-03-26",
+      "sourceUrls": [
+        "https://www.ppc.go.jp/files/pdf/250324_guidelines01.pdf",
+        "https://www.jftc.go.jp/toriteki_2025/",
+        "https://www.caa.go.jp/policies/policy/consumer_system/consumer_contract_act/amendment/2022/"
+      ]
+    },
+    {
+      "route": "/docs/first-stage/management-information-systems",
+      "docPath": "content/docs/first-stage/management-information-systems/index.mdx",
+      "reviewWindowDays": 180,
+      "lastReviewedAt": "2026-03-26",
+      "sourceUrls": [
+        "https://www.ipa.go.jp/publish/secbooks20130304.html",
+        "https://www.meti.go.jp/policy/it_policy/investment/dgc/dgc3.0.pdf",
+        "https://www.ipa.go.jp/security/10threats/10threats2026.html"
+      ]
+    },
+    {
+      "route": "/docs/first-stage/management-information-systems/ict-basics",
+      "docPath": "content/docs/first-stage/management-information-systems/ict-basics.mdx",
+      "reviewWindowDays": 180,
+      "lastReviewedAt": "2026-03-26",
+      "sourceUrls": [
+        "https://www.ipa.go.jp/security/10threats/10threats2026.html",
+        "https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20250328_4.pdf"
+      ]
+    },
+    {
+      "route": "/docs/first-stage/management-information-systems/information-management",
+      "docPath": "content/docs/first-stage/management-information-systems/information-management.mdx",
+      "reviewWindowDays": 180,
+      "lastReviewedAt": "2026-03-26",
+      "sourceUrls": [
+        "https://www.ipa.go.jp/publish/secbooks20130304.html",
+        "https://www.meti.go.jp/policy/it_policy/investment/dgc/dgc3.0.pdf",
+        "https://www.ipa.go.jp/digital/model/index.html"
+      ]
+    },
+    {
+      "route": "/docs/first-stage/sme-management-and-policy",
+      "docPath": "content/docs/first-stage/sme-management-and-policy/index.mdx",
+      "reviewWindowDays": 120,
+      "lastReviewedAt": "2026-03-26",
+      "sourceUrls": [
+        "https://www.chusho.meti.go.jp/pamflet/hakusyo/index.html",
+        "https://www.chusho.meti.go.jp/pamflet/g_book/2024/download/01teigi.pdf",
+        "https://www.chusho.meti.go.jp/keiei/shokibo/kihonkeikaku.html"
+      ]
+    },
+    {
+      "route": "/docs/first-stage/sme-management-and-policy/sme-management",
+      "docPath": "content/docs/first-stage/sme-management-and-policy/sme-management.mdx",
+      "reviewWindowDays": 120,
+      "lastReviewedAt": "2026-03-26",
+      "sourceUrls": [
+        "https://www.chusho.meti.go.jp/pamflet/hakusyo/2025/chusho/gaiyo.html",
+        "https://www.chusho.meti.go.jp/pamflet/hakusyo/2025/shokibo/b1_1_6.html",
+        "https://www.chusho.meti.go.jp/faq/faq/faq01_teigi.html"
+      ]
+    },
+    {
+      "route": "/docs/first-stage/sme-management-and-policy/sme-policy",
+      "docPath": "content/docs/first-stage/sme-management-and-policy/sme-policy.mdx",
+      "reviewWindowDays": 120,
+      "lastReviewedAt": "2026-03-26",
+      "sourceUrls": [
+        "https://www.chusho.meti.go.jp/koukai/hojyokin/kobo/2026/260128002.html",
+        "https://it-shien.smrj.go.jp/schedule",
+        "https://www.jftc.go.jp/toriteki/"
+      ]
+    }
+  ]
+}
