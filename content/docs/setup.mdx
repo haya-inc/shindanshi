@@ -1,0 +1,18 @@
+---
+title: セットアップ
+description: 現在の初期構成と採用方針
+---
+
+## 採用している構成
+
+- パッケージマネージャ: `pnpm`
+- フレームワーク: `Next.js 16 App Router`
+- ドキュメント: `Fumadocs`
+- デプロイ先: `Vercel`
+
+## 基本方針
+
+- 新規のデータ取得は Server Components を優先します。
+- キャッシュは `Cache Components` を前提に設計します。
+- ドキュメントは `content/docs` を source にして管理します。
+- 複雑な抽象化は避け、最小差分で進めます。
