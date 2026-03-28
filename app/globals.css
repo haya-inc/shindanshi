@@ -345,9 +345,7 @@ body {
 }
 
 #nd-page .prose table {
-  display: block;
   width: 100%;
-  overflow-x: auto;
   border-collapse: separate;
   border-spacing: 0;
   border: 1px solid var(--line);
