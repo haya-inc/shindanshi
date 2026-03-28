@@ -16,7 +16,7 @@ import { getLLMText } from "@/lib/get-llm-text";
 import { source } from "@/lib/source";
 
 const openrouter = createOpenRouter();
-const chatModelId = "qwen/qwen3.5-9b";
+const chatModelId = "google/gemini-3.1-flash-lite-preview";
 const chatModel = openrouter(chatModelId);
 const searchToolContentLimit = 6000;
 const searchToolHitLimit = 40;
