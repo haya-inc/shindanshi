@@ -14,4 +14,6 @@ export const docsSearch = createFromSource(source, {
   tokenizer: createTokenizer(),
 });
 
-export const docsPagesByUrl = new Map(source.getPages().map((page) => [page.url, page]));
+export const docsPagesByUrl = new Map(
+  source.getPages().map((page) => [page.url, page]),
+);

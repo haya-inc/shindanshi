@@ -1,16 +1,24 @@
-'use client';
+"use client";
 
-import { lazy, type RefObject, useEffect, useMemo, useRef, useState, useSyncExternalStore } from 'react';
+import {
+  lazy,
+  type RefObject,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  useSyncExternalStore,
+} from "react";
 import type {
   ForceGraphMethods,
   ForceGraphProps,
   LinkObject,
   NodeObject,
-} from 'react-force-graph-2d';
-import { forceCenter, forceCollide, forceLink, forceManyBody } from 'd3-force';
-import { useRouter } from 'fumadocs-core/framework';
-import { cardSurfaceClass, popoverSurfaceClass } from '@/components/ui/surface';
-import { cn } from '@/lib/cn';
+} from "react-force-graph-2d";
+import { forceCenter, forceCollide, forceLink, forceManyBody } from "d3-force";
+import { useRouter } from "fumadocs-core/framework";
+import { cardSurfaceClass, popoverSurfaceClass } from "@/components/ui/surface";
+import { cn } from "@/lib/cn";
 
 export interface Graph {
   links: Link[];
@@ -51,8 +59,8 @@ const defaultGraphPalette: GraphPalette = {
 };
 
 const ForceGraph2D = lazy(
-  () => import('react-force-graph-2d'),
-) as typeof import('react-force-graph-2d').default;
+  () => import("react-force-graph-2d"),
+) as typeof import("react-force-graph-2d").default;
 
 function readGraphPalette(container: HTMLDivElement | null): GraphPalette {
   if (!container) {
@@ -60,9 +68,15 @@ function readGraphPalette(container: HTMLDivElement | null): GraphPalette {
   }
 
   const style = getComputedStyle(container);
-  const primary = style.getPropertyValue("--color-fd-primary").trim() || defaultGraphPalette.nodeActive;
-  const muted = style.getPropertyValue("--color-fd-muted-foreground").trim() || defaultGraphPalette.nodeIdle;
-  const foreground = style.getPropertyValue("--color-fd-foreground").trim() || defaultGraphPalette.label;
+  const primary =
+    style.getPropertyValue("--color-fd-primary").trim() ||
+    defaultGraphPalette.nodeActive;
+  const muted =
+    style.getPropertyValue("--color-fd-muted-foreground").trim() ||
+    defaultGraphPalette.nodeIdle;
+  const foreground =
+    style.getPropertyValue("--color-fd-foreground").trim() ||
+    defaultGraphPalette.label;
 
   return {
     label: foreground,
@@ -93,12 +107,14 @@ export function GraphView({ graph, className }: GraphViewProps) {
     <div
       ref={containerRef}
       className={cn(
-        'relative h-[640px] overflow-hidden rounded-3xl [&_canvas]:size-full',
+        "relative h-[640px] overflow-hidden rounded-3xl [&_canvas]:size-full",
         cardSurfaceClass,
         className,
       )}
     >
-      {mounted ? <ClientGraph graph={graph} containerRef={containerRef} /> : null}
+      {mounted ? (
+        <ClientGraph graph={graph} containerRef={containerRef} />
+      ) : null}
     </div>
   );
 }
@@ -106,7 +122,10 @@ export function GraphView({ graph, className }: GraphViewProps) {
 function ClientGraph({
   graph,
   containerRef,
-}: { graph: Graph; containerRef: RefObject<HTMLDivElement | null> }) {
+}: {
+  graph: Graph;
+  containerRef: RefObject<HTMLDivElement | null>;
+}) {
   const graphRef = useRef<ForceGraphMethods<Node, Link> | undefined>(undefined);
   const hoveredRef = useRef<Node | null>(null);
   const router = useRouter();
@@ -155,7 +174,9 @@ function ClientGraph({
       const height = Math.round(container.clientHeight);
 
       setViewport((current) =>
-        current.width === width && current.height === height ? current : { width, height },
+        current.width === width && current.height === height
+          ? current
+          : { width, height },
       );
 
       window.clearTimeout(timer);
@@ -198,16 +219,20 @@ function ClientGraph({
 
     for (const node of clone.nodes) {
       const nodeId = node.id?.toString();
-      node.neighbors = nodeId ? neighborsById.get(nodeId) ?? [] : [];
+      node.neighbors = nodeId ? (neighborsById.get(nodeId) ?? []) : [];
     }
 
     return clone;
   }, [graph]);
 
-  const nodeCanvasObject: ForceGraphProps<NodeType, LinkType>["nodeCanvasObject"] = (node, ctx) => {
+  const nodeCanvasObject: ForceGraphProps<
+    NodeType,
+    LinkType
+  >["nodeCanvasObject"] = (node, ctx) => {
     const hoveredNode = hoveredRef.current;
     const isActive =
-      hoveredNode?.id === node.id || hoveredNode?.neighbors?.includes(node.id as string);
+      hoveredNode?.id === node.id ||
+      hoveredNode?.neighbors?.includes(node.id as string);
     const radius = isActive ? 7 : 5;
 
     ctx.beginPath();
@@ -293,7 +318,7 @@ function ClientGraph({
       {tooltip ? (
         <div
           className={cn(
-            'pointer-events-none absolute max-w-xs rounded-2xl px-3 py-2 text-sm shadow-xl',
+            "pointer-events-none absolute max-w-xs rounded-2xl px-3 py-2 text-sm shadow-xl",
             popoverSurfaceClass,
           )}
           style={{ left: tooltip.x, top: tooltip.y }}

@@ -1,8 +1,12 @@
-'use cache';
+"use cache";
 
 import type { ReactNode } from "react";
 import { MessageCircleIcon } from "lucide-react";
-import { AISearch, AISearchPanel, AISearchTrigger } from "@/components/ai/search";
+import {
+  AISearch,
+  AISearchPanel,
+  AISearchTrigger,
+} from "@/components/ai/search";
 import { buttonVariants } from "@/components/ui/button";
 import { DocsLayout } from "fumadocs-ui/layouts/docs";
 import { cn } from "@/lib/cn";

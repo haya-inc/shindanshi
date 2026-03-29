@@ -1,7 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import type { ActionResponse, PageFeedback, PageFeedbackRequest } from "@/components/feedback/schema";
+import type {
+  ActionResponse,
+  PageFeedback,
+  PageFeedbackRequest,
+} from "@/components/feedback/schema";
 import {
   FeedbackSubmittedActions,
   useFeedbackSubmission,
@@ -34,7 +38,9 @@ function feedbackOpinionButtonClass(active: boolean) {
 }
 
 export function Feedback({ pageUrl, pageTitle, pagePath }: FeedbackProps) {
-  const storage = useStoredFeedback<StoredPageFeedback>(`docs-feedback-page-${pageUrl}`);
+  const storage = useStoredFeedback<StoredPageFeedback>(
+    `docs-feedback-page-${pageUrl}`,
+  );
   const [opinion, setOpinion] = useState<PageFeedback["opinion"] | null>(null);
   const [message, setMessage] = useState("");
   const { errorMessage, isPending, submit } = useFeedbackSubmission();
@@ -76,7 +82,9 @@ export function Feedback({ pageUrl, pageTitle, pagePath }: FeedbackProps) {
     <section className="not-prose mt-10 rounded-2xl border border-fd-border bg-fd-card p-5">
       <div className="space-y-4">
         <div className="space-y-1">
-          <h2 className="text-base font-semibold text-fd-foreground">このページは役に立ちましたか？</h2>
+          <h2 className="text-base font-semibold text-fd-foreground">
+            このページは役に立ちましたか？
+          </h2>
           <p className="text-sm text-fd-muted-foreground">
             評価とひとことを残してもらえると、内容と導線の改善に使えます。
           </p>
@@ -102,7 +110,9 @@ export function Feedback({ pageUrl, pageTitle, pagePath }: FeedbackProps) {
 
         {storage.previous ? (
           <div className="space-y-3 rounded-2xl border border-fd-border bg-fd-background px-4 py-4 text-sm">
-            <p className="text-fd-foreground">送信しました。次の改善に使います。</p>
+            <p className="text-fd-foreground">
+              送信しました。次の改善に使います。
+            </p>
             <FeedbackSubmittedActions
               githubUrl={storage.previous.response?.githubUrl}
               onReset={() => storage.setPrevious(null)}
@@ -127,7 +137,9 @@ export function Feedback({ pageUrl, pageTitle, pagePath }: FeedbackProps) {
                 {isPending ? "送信中..." : "Feedback を送る"}
               </button>
 
-              {errorMessage ? <p className="text-sm text-red-600">{errorMessage}</p> : null}
+              {errorMessage ? (
+                <p className="text-sm text-red-600">{errorMessage}</p>
+              ) : null}
             </div>
           </div>
         )}

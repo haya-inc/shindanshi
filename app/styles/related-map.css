@@ -70,14 +70,22 @@
   border-radius: 1.5rem;
   background:
     radial-gradient(circle at top, rgba(31, 106, 87, 0.1), transparent 45%),
-    radial-gradient(circle at bottom, rgba(154, 106, 32, 0.12), transparent 38%),
+    radial-gradient(
+      circle at bottom,
+      rgba(154, 106, 32, 0.12),
+      transparent 38%
+    ),
     rgba(255, 255, 255, 0.34);
 }
 
 .dark .wiki-related-map-graph {
   background:
     radial-gradient(circle at top, rgba(143, 208, 185, 0.1), transparent 45%),
-    radial-gradient(circle at bottom, rgba(215, 175, 113, 0.12), transparent 38%),
+    radial-gradient(
+      circle at bottom,
+      rgba(215, 175, 113, 0.12),
+      transparent 38%
+    ),
     rgba(255, 255, 255, 0.02);
 }
 

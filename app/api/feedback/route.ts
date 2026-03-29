@@ -18,7 +18,10 @@ export async function POST(request: Request) {
 
     return NextResponse.json(
       {
-        error: error instanceof Error ? error.message : "Feedback の送信に失敗しました。",
+        error:
+          error instanceof Error
+            ? error.message
+            : "Feedback の送信に失敗しました。",
       },
       { status: 500 },
     );

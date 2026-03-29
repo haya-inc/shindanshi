@@ -8,7 +8,10 @@ import {
   resolveRelativeDocHref,
   toDocUrlFromRelativePath,
 } from "./check-doc-links.mjs";
-import { detectActualGates, parseClaimedGates } from "./check-wiki-maintenance.mjs";
+import {
+  detectActualGates,
+  parseClaimedGates,
+} from "./check-wiki-maintenance.mjs";
 import {
   extractLevel2Headings,
   findMissingSections,
@@ -18,7 +21,10 @@ import {
 const docsRoot = path.join(process.cwd(), "content", "docs");
 
 test("check-doc-links は route group と index を docs ルートへ正規化する", () => {
-  assert.equal(normalizeDocRoutePath("finance-and-accounting/index.mdx"), "finance-and-accounting");
+  assert.equal(
+    normalizeDocRoutePath("finance-and-accounting/index.mdx"),
+    "finance-and-accounting",
+  );
   assert.equal(
     toDocUrlFromRelativePath("finance-and-accounting/cost-accounting.mdx"),
     "/finance-and-accounting/cost-accounting",
@@ -96,7 +102,14 @@ test("check-doc-page-structure は不足セクションを検出する", () => {
 
 test("check-wiki-maintenance は達成ゲートの短縮記法を展開する", () => {
   assert.deepEqual(parseClaimedGates("G1-G5"), ["G1", "G2", "G3", "G4", "G5"]);
-  assert.deepEqual(parseClaimedGates("G1-G6"), ["G1", "G2", "G3", "G4", "G5", "G6"]);
+  assert.deepEqual(parseClaimedGates("G1-G6"), [
+    "G1",
+    "G2",
+    "G3",
+    "G4",
+    "G5",
+    "G6",
+  ]);
   assert.deepEqual(parseClaimedGates("G1, G4, G5"), ["G1", "G4", "G5"]);
 });
 

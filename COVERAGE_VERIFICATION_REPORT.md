@@ -9,22 +9,23 @@
 ## 1. リンク切れ（Broken Links）
 
 ### 確認された問題
+
 計4つのリンク切れが存在：
 
 #### a) 新規wiki ノード不足（2件）
 
-| パス | 問題参照 | 説明 |
-|------|--------|------|
-| `/finance-and-accounting/capital-budgeting-and-investment-evaluation` | r03/finance Q21 | 資本予算・投資評価の専用ノードが不足 |
-| `/finance-and-accounting/enterprise-value-evaluation-and-wacc` | r03/finance Q22 | 企業価値評価・WACC理論の専用ノードが不足 |
+| パス                                                                  | 問題参照        | 説明                                     |
+| --------------------------------------------------------------------- | --------------- | ---------------------------------------- |
+| `/finance-and-accounting/capital-budgeting-and-investment-evaluation` | r03/finance Q21 | 資本予算・投資評価の専用ノードが不足     |
+| `/finance-and-accounting/enterprise-value-evaluation-and-wacc`        | r03/finance Q22 | 企業価値評価・WACC理論の専用ノードが不足 |
 
 **現状**: 関連概念は `finance-profitability-index.mdx` などで部分的にカバーされているが、統合的なノードがない
 
 #### b) リンク形式エラー（2件）
 
-| パス | 問題参照 | 説明 |
-|------|--------|------|
-| `/finance-and-accounting/finance.mdx` | r04/finance Q22 | リンクに `.mdx` 拡張子を含める（誤り）。正しくは `/finance-and-accounting/finance` |
+| パス                                                                        | 問題参照             | 説明                                                                                                                     |
+| --------------------------------------------------------------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `/finance-and-accounting/finance.mdx`                                       | r04/finance Q22      | リンクに `.mdx` 拡張子を含める（誤り）。正しくは `/finance-and-accounting/finance`                                       |
 | `/management-information-systems/knowledge-systems-development-methods.mdx` | r04/info-systems Q11 | リンクに `.mdx` 拡張子を含める（誤り）。正しくは `/management-information-systems/knowledge-systems-development-methods` |
 
 **影響**: リンク変換時のパス解決エラー
@@ -35,30 +36,34 @@
 
 ### 問題別内訳
 
-| 科目 | 年度 | 問題番号 | 問数 |
-|-----|------|---------|-----|
-| **Finance & Accounting** | R2 | 全24問（Q1-24） | 24 |
-|  | R3 | Q1-Q20 | 20 |
-| **Business Management** | R2 | Q23-Q25 | 3 |
-|  | R3 | Q32-Q38 | 7 |
-| **Total** | — | — | **54** |
+| 科目                     | 年度 | 問題番号        | 問数   |
+| ------------------------ | ---- | --------------- | ------ |
+| **Finance & Accounting** | R2   | 全24問（Q1-24） | 24     |
+|                          | R3   | Q1-Q20          | 20     |
+| **Business Management**  | R2   | Q23-Q25         | 3      |
+|                          | R3   | Q32-Q38         | 7      |
+| **Total**                | —    | —               | **54** |
 
 ### 詳細
 
 **R2 Finance (全24問):**
+
 - Q1-Q24 すべてがwiki link 未装備
 - 必要知識: 簿記基礎、決算処理、有価証券評価、原価計算、財務分析、ポートフォリオ理論、資本構成理論など
 - **原因**: 解説ファイル作成時点でwiki ノードが完成していなかったと推定
 
 **R3 Finance (Q1-Q20):**
+
 - 全20問がwiki link 未装備（Q21-Q24は正常）
 - Q21-Q22は broken link（上記参照）
 
 **R2 Business Management (Q23-Q25):**
+
 - 3問のみlink 未装備
 - Q1-Q22は正常にカバー
 
 **R3 Business Management (Q32-Q38):**
+
 - 7問のみlink 未装備
 - Q1-Q31は正常にカバー
 
@@ -94,12 +99,12 @@
 
 ## 4. 総合カバレッジ率
 
-| 指標 | 値 |
-|------|-----|
-| 総問数（R2-R4） | 578 |
-| wiki link 装備問数 | 524 |
-| wiki link 未装備問数 | 54 |
-| **カバレッジ率** | **90.7%** |
+| 指標                 | 値        |
+| -------------------- | --------- |
+| 総問数（R2-R4）      | 578       |
+| wiki link 装備問数   | 524       |
+| wiki link 未装備問数 | 54        |
+| **カバレッジ率**     | **90.7%** |
 
 ---
 
@@ -113,10 +118,12 @@
 ### 優先度2: 新規wiki ノード追加（1-2週間）
 
 **Finance: Capital Budgeting & Investment Evaluation**
+
 - 対象: r03 finance Q21
 - 必要な内容: NPV、IRR、回収期間法、ポートフォリオ理論、CAPM との関連
 
 **Finance: Enterprise Value & WACC**
+
 - 対象: r03 finance Q22
 - 必要な内容: WACC 計算、MM定理、税効果、資本構成最適性
 

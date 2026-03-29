@@ -1,4 +1,13 @@
 {
   "title": "平成28年度（2016）",
-  "pages": ["index", "economics", "finance", "management", "operations", "business-law", "info-systems", "sme-policy"]
+  "pages": [
+    "index",
+    "economics",
+    "finance",
+    "management",
+    "operations",
+    "business-law",
+    "info-systems",
+    "sme-policy"
+  ]
 }

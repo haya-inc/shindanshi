@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { createRelativeLink } from "fumadocs-ui/mdx";
-import { DocsBody, DocsDescription, DocsPage, DocsTitle } from "fumadocs-ui/page";
+import {
+  DocsBody,
+  DocsDescription,
+  DocsPage,
+  DocsTitle,
+} from "fumadocs-ui/page";
 import { DocsRelatedGraph } from "@/components/docs-related-graph";
 import { DocsPageActions } from "@/components/docs-page-actions";
 import { Feedback } from "@/components/feedback/client";
@@ -22,7 +27,9 @@ export async function generateStaticParams() {
   return source.generateParams();
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const { slug = [] } = await params;
   const page = source.getPage(slug);
 
@@ -42,7 +49,7 @@ export default async function Page({ params }: PageProps) {
 }
 
 async function renderCachedPage(slug: string[]) {
-  'use cache';
+  "use cache";
 
   const page = source.getPage(slug);
   const isHomePage = slug.length === 0;
@@ -55,7 +62,8 @@ async function renderCachedPage(slug: string[]) {
   const isReferenceTool = isReferenceToolPage(page.url);
   const markdownUrl = `${page.url}.mdx`;
   const githubUrl = `https://github.com/haya-inc/shindanshi/blob/main/content/docs/${page.path}`;
-  const relatedGraph = isHomePage || isReferenceTool ? null : getRelatedDocsGraph(page.url);
+  const relatedGraph =
+    isHomePage || isReferenceTool ? null : getRelatedDocsGraph(page.url);
   const siteGraph = isHomePage ? buildGraph() : null;
   const HomeKnowledgeGraph = siteGraph
     ? function HomeKnowledgeGraph() {
@@ -64,14 +72,20 @@ async function renderCachedPage(slug: string[]) {
             <div className="wiki-home-graph-copy">
               <div className="space-y-1">
                 <p className="wiki-home-card-kicker">Knowledge Graph</p>
-                <h2 className="wiki-home-section-title">知識のつながりが一目でわかる全体図</h2>
+                <h2 className="wiki-home-section-title">
+                  知識のつながりが一目でわかる全体図
+                </h2>
                 <p className="wiki-home-section-copy">
                   ページ同士の参照関係を俯瞰しながら、今どこから読み始めるかを選べます。
                 </p>
               </div>
               <div className="wiki-home-graph-meta">
-                <span className="wiki-home-graph-chip">ページ {siteGraph.nodes.length} 件</span>
-                <span className="wiki-home-graph-chip">参照 {siteGraph.links.length} 本</span>
+                <span className="wiki-home-graph-chip">
+                  ページ {siteGraph.nodes.length} 件
+                </span>
+                <span className="wiki-home-graph-chip">
+                  参照 {siteGraph.links.length} 本
+                </span>
               </div>
             </div>
             <GraphView graph={siteGraph} className="h-[22rem] md:h-[30rem]" />
@@ -90,7 +104,11 @@ async function renderCachedPage(slug: string[]) {
       full={page.data.full ?? isHomePage}
       lastUpdate={page.data.lastModified}
       className={isHomePage ? "wiki-home-page" : "wiki-docs-page"}
-      breadcrumb={{ enabled: !isHomePage, includePage: slug.length > 1, includeRoot: { url: `/${slug[0]}` } }}
+      breadcrumb={{
+        enabled: !isHomePage,
+        includePage: slug.length > 1,
+        includeRoot: { url: `/${slug[0]}` },
+      }}
       footer={{ enabled: !isHomePage }}
       tableOfContent={{ enabled: !isHomePage }}
       tableOfContentPopover={{ enabled: !isHomePage }}

@@ -55,7 +55,9 @@ function formatDate(date, timeZone = "Asia/Tokyo") {
     day: "2-digit",
   });
   const parts = formatter.formatToParts(date);
-  const values = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+  const values = Object.fromEntries(
+    parts.map((part) => [part.type, part.value]),
+  );
   return `${values.year}-${values.month}-${values.day}`;
 }
 
@@ -104,7 +106,8 @@ export function parseClaimedGates(value) {
 
 function buildDocPathCandidates(route) {
   const slug = route.replace(/^\//u, "");
-  const basePath = slug === "" ? "content/docs" : path.join("content/docs", slug);
+  const basePath =
+    slug === "" ? "content/docs" : path.join("content/docs", slug);
   return [
     path.join(root, `${basePath}.mdx`),
     path.join(root, basePath, "index.mdx"),
@@ -112,7 +115,11 @@ function buildDocPathCandidates(route) {
 }
 
 function routeToDocPath(route) {
-  return buildDocPathCandidates(route).find((candidate) => fs.existsSync(candidate)) ?? null;
+  return (
+    buildDocPathCandidates(route).find((candidate) =>
+      fs.existsSync(candidate),
+    ) ?? null
+  );
 }
 
 function extractTrackedPages() {
@@ -177,7 +184,8 @@ export function detectActualGates(content, hasFreshnessEntry) {
   const actual = new Set();
   const hasInternalLink = /\]\(\/[^)]+\)/u.test(content);
   const hasExternalLink = /\]\(https:\/\/[^)]+\)/u.test(content);
-  const hasDateMarker = /\b20\d{2}-\d{2}-\d{2}\b/u.test(content) || /令和\d+年度/u.test(content);
+  const hasDateMarker =
+    /\b20\d{2}-\d{2}-\d{2}\b/u.test(content) || /令和\d+年度/u.test(content);
 
   if (hasAnyPattern(content, gateHeadingPatterns.G1)) {
     actual.add("G1");
@@ -188,7 +196,10 @@ export function detectActualGates(content, hasFreshnessEntry) {
     actual.add("G2");
   }
 
-  if (hasAnyPattern(content, gateHeadingPatterns.G3) || /^\|.+\|$/mu.test(content)) {
+  if (
+    hasAnyPattern(content, gateHeadingPatterns.G3) ||
+    /^\|.+\|$/mu.test(content)
+  ) {
     actual.add("G3");
   }
 
@@ -211,7 +222,7 @@ function loadFreshnessRegistry() {
   const timeZone = registry.timezone ?? "Asia/Tokyo";
   const today = parseDateString(formatDate(new Date(), timeZone));
   const freshnessEntries = new Map(
-    registry.entries.map((entry) => [entry.docPath, entry])
+    registry.entries.map((entry) => [entry.docPath, entry]),
   );
 
   return { registry, freshnessEntries, today, timeZone };
@@ -231,7 +242,10 @@ function validateFreshnessEntries(registry, today, timeZone) {
       continue;
     }
 
-    if (!Number.isInteger(entry.reviewWindowDays) || entry.reviewWindowDays <= 0) {
+    if (
+      !Number.isInteger(entry.reviewWindowDays) ||
+      entry.reviewWindowDays <= 0
+    ) {
       errors.push(`reviewWindowDays が不正です: ${entry.route}`);
       continue;
     }
@@ -248,25 +262,27 @@ function validateFreshnessEntries(registry, today, timeZone) {
 
     for (const sourceUrl of entry.sourceUrls) {
       if (!content.includes(sourceUrl)) {
-        errors.push(`本文に一次情報 URL が見つかりません: ${entry.route} -> ${sourceUrl}`);
+        errors.push(
+          `本文に一次情報 URL が見つかりません: ${entry.route} -> ${sourceUrl}`,
+        );
       }
     }
 
     if (today > staleOn) {
       errors.push(
-        `鮮度確認の期限切れです: ${entry.route} 最終確認 ${entry.lastReviewedAt} / 期限 ${formatDate(staleOn, timeZone)}`
+        `鮮度確認の期限切れです: ${entry.route} 最終確認 ${entry.lastReviewedAt} / 期限 ${formatDate(staleOn, timeZone)}`,
       );
       continue;
     }
 
     if (daysLeft <= 14) {
       warnings.push(
-        `鮮度確認の期限が近いです: ${entry.route} 最終確認 ${entry.lastReviewedAt} / 期限 ${formatDate(staleOn, timeZone)}`
+        `鮮度確認の期限が近いです: ${entry.route} 最終確認 ${entry.lastReviewedAt} / 期限 ${formatDate(staleOn, timeZone)}`,
       );
     }
 
     results.push(
-      `OK ${entry.route} 最終確認 ${entry.lastReviewedAt} / 次回確認期限 ${formatDate(staleOn, timeZone)}`
+      `OK ${entry.route} 最終確認 ${entry.lastReviewedAt} / 次回確認期限 ${formatDate(staleOn, timeZone)}`,
     );
   }
 
@@ -292,25 +308,37 @@ function validateTrackedPages(trackedPages, freshnessEntries, docFiles) {
     const resolvedPath = routeToDocPath(trackedPage.route);
 
     if (!resolvedPath) {
-      errors.push(`進捗トラッカーの公開導線に対応するファイルが見つかりません: ${trackedPage.route}`);
+      errors.push(
+        `進捗トラッカーの公開導線に対応するファイルが見つかりません: ${trackedPage.route}`,
+      );
       continue;
     }
 
     const doc = docByPath.get(resolvedPath);
     const content = doc ? doc.content : fs.readFileSync(resolvedPath, "utf8");
-    const relativeDocPath = doc ? doc.relativePath : toPosix(path.relative(root, resolvedPath));
+    const relativeDocPath = doc
+      ? doc.relativePath
+      : toPosix(path.relative(root, resolvedPath));
     const freshnessEntry = freshnessEntries.get(relativeDocPath);
     const actualGates = detectActualGates(content, Boolean(freshnessEntry));
     const claimedGates = parseClaimedGates(trackedPage.claimedGates);
 
     for (const gate of claimedGates) {
       if (!actualGates.has(gate)) {
-        errors.push(`達成ゲートの根拠が本文から確認できません: ${trackedPage.route} -> ${gate}`);
+        errors.push(
+          `達成ゲートの根拠が本文から確認できません: ${trackedPage.route} -> ${gate}`,
+        );
       }
     }
 
-    if (trackedPage.topicType === "更新論点" && trackedPage.status === "公開済み" && !actualGates.has("G6")) {
-      errors.push(`更新論点の公開済みページに G6 が不足しています: ${trackedPage.route}`);
+    if (
+      trackedPage.topicType === "更新論点" &&
+      trackedPage.status === "公開済み" &&
+      !actualGates.has("G6")
+    ) {
+      errors.push(
+        `更新論点の公開済みページに G6 が不足しています: ${trackedPage.route}`,
+      );
     }
   }
 
@@ -329,7 +357,9 @@ function validateUpdateProneDocs(freshnessEntries, docFiles) {
       /令和\d+年度/u.test(docFile.content);
 
     if (looksUpdateProne && !freshnessEntries.has(docFile.relativePath)) {
-      errors.push(`更新系ページが鮮度台帳に未登録です: ${docFile.relativePath}`);
+      errors.push(
+        `更新系ページが鮮度台帳に未登録です: ${docFile.relativePath}`,
+      );
     }
   }
 
@@ -343,14 +373,19 @@ function printLines(lines, writer) {
 }
 
 export function main() {
-  const { registry, freshnessEntries, today, timeZone } = loadFreshnessRegistry();
+  const { registry, freshnessEntries, today, timeZone } =
+    loadFreshnessRegistry();
   const freshnessValidation = validateFreshnessEntries(
     registry,
     today,
-    timeZone
+    timeZone,
   );
   const docFiles = collectDocFiles();
-  const trackedPageErrors = validateTrackedPages(extractTrackedPages(), freshnessEntries, docFiles);
+  const trackedPageErrors = validateTrackedPages(
+    extractTrackedPages(),
+    freshnessEntries,
+    docFiles,
+  );
   const updateProneErrors = validateUpdateProneDocs(freshnessEntries, docFiles);
   const errors = [
     ...freshnessValidation.errors,
@@ -367,6 +402,9 @@ export function main() {
   }
 }
 
-if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+if (
+  process.argv[1] &&
+  import.meta.url === pathToFileURL(process.argv[1]).href
+) {
   main();
 }

@@ -1,4 +1,4 @@
-'use server';
+"use server";
 
 import { appendFile, mkdir } from "node:fs/promises";
 import path from "node:path";
@@ -10,7 +10,10 @@ import {
 } from "@/components/feedback/schema";
 
 function resolveFeedbackLogPath() {
-  return process.env.DOCS_FEEDBACK_LOG_PATH ?? path.join(process.cwd(), "data", "docs-feedback.jsonl");
+  return (
+    process.env.DOCS_FEEDBACK_LOG_PATH ??
+    path.join(process.cwd(), "data", "docs-feedback.jsonl")
+  );
 }
 
 async function appendFeedbackLog(record: Record<string, unknown>) {
@@ -20,7 +23,10 @@ async function appendFeedbackLog(record: Record<string, unknown>) {
     await mkdir(path.dirname(logPath), { recursive: true });
     await appendFile(logPath, `${JSON.stringify(record)}\n`, "utf8");
   } catch (error) {
-    console.warn("[docs-feedback] ファイル保存に失敗しました。ログ出力のみ継続します。", error);
+    console.warn(
+      "[docs-feedback] ファイル保存に失敗しました。ログ出力のみ継続します。",
+      error,
+    );
   }
 }
 
@@ -41,7 +47,9 @@ async function postFeedbackWebhook(record: Record<string, unknown>) {
   });
 
   if (!response.ok) {
-    throw new Error(`Feedback webhook の送信に失敗しました: ${response.status}`);
+    throw new Error(
+      `Feedback webhook の送信に失敗しました: ${response.status}`,
+    );
   }
 }
 

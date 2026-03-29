@@ -1,16 +1,24 @@
-'use client';
+"use client";
 
-import { type ComponentProps, type SyntheticEvent, useEffect, useRef, useState } from 'react';
-import { Loader2, RefreshCw, Send } from 'lucide-react';
-import { buttonVariants } from '@/components/ui/button';
-import { cn } from '@/lib/cn';
-import { useAISearchChatContext } from '@/components/ai/search-context';
+import {
+  type ComponentProps,
+  type SyntheticEvent,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
+import { Loader2, RefreshCw, Send } from "lucide-react";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/cn";
+import { useAISearchChatContext } from "@/components/ai/search-context";
 
-const storageKeyInput = '__ai_search_input';
+const storageKeyInput = "__ai_search_input";
 
 function useStoredInput(storageKey: string) {
   const [value, setValue] = useState(() =>
-    typeof window === 'undefined' ? '' : localStorage.getItem(storageKey) ?? '',
+    typeof window === "undefined"
+      ? ""
+      : (localStorage.getItem(storageKey) ?? ""),
   );
 
   function updateValue(nextValue: string) {
@@ -31,8 +39,9 @@ function useStoredInput(storageKey: string) {
 }
 
 export function AISearchInputActions() {
-  const { messages, status, setMessages, regenerate } = useAISearchChatContext();
-  const isLoading = status === 'streaming';
+  const { messages, status, setMessages, regenerate } =
+    useAISearchChatContext();
+  const isLoading = status === "streaming";
 
   if (messages.length === 0) {
     return null;
@@ -40,12 +49,12 @@ export function AISearchInputActions() {
 
   return (
     <>
-      {!isLoading && messages.at(-1)?.role === 'assistant' ? (
+      {!isLoading && messages.at(-1)?.role === "assistant" ? (
         <button
           type="button"
           className={buttonVariants({
-            color: 'secondary',
-            size: 'sm',
+            color: "secondary",
+            size: "sm",
           })}
           onClick={() => regenerate()}
         >
@@ -56,8 +65,8 @@ export function AISearchInputActions() {
       <button
         type="button"
         className={buttonVariants({
-          color: 'secondary',
-          size: 'sm',
+          color: "secondary",
+          size: "sm",
         })}
         onClick={() => setMessages([])}
       >
@@ -67,10 +76,10 @@ export function AISearchInputActions() {
   );
 }
 
-export function AISearchInput(props: ComponentProps<'form'>) {
+export function AISearchInput(props: ComponentProps<"form">) {
   const { status, sendMessage, stop } = useAISearchChatContext();
   const { value: input, setValue: setInput } = useStoredInput(storageKeyInput);
-  const isLoading = status === 'streaming' || status === 'submitted';
+  const isLoading = status === "streaming" || status === "submitted";
 
   function handleStart(event?: SyntheticEvent) {
     event?.preventDefault();
@@ -82,26 +91,30 @@ export function AISearchInput(props: ComponentProps<'form'>) {
     }
 
     void sendMessage({ text: message });
-    setInput('');
+    setInput("");
   }
 
   useEffect(() => {
     if (isLoading) {
-      document.getElementById('nd-ai-input')?.focus();
+      document.getElementById("nd-ai-input")?.focus();
     }
   }, [isLoading]);
 
   return (
-    <form {...props} className={cn('flex items-start pe-2', props.className)} onSubmit={handleStart}>
+    <form
+      {...props}
+      className={cn("flex items-start pe-2", props.className)}
+      onSubmit={handleStart}
+    >
       <Input
         value={input}
-        placeholder={isLoading ? 'AI が回答しています...' : '質問を書く'}
+        placeholder={isLoading ? "AI が回答しています..." : "質問を書く"}
         autoFocus
         className="p-3"
         disabled={isLoading}
         onChange={(event) => setInput(event.target.value)}
         onKeyDown={(event) => {
-          if (!event.shiftKey && event.key === 'Enter') {
+          if (!event.shiftKey && event.key === "Enter") {
             handleStart(event);
           }
         }}
@@ -110,9 +123,9 @@ export function AISearchInput(props: ComponentProps<'form'>) {
         <button
           type="button"
           className={buttonVariants({
-            color: 'secondary',
-            size: 'sm',
-            className: 'mt-2 transition-all',
+            color: "secondary",
+            size: "sm",
+            className: "mt-2 transition-all",
           })}
           onClick={stop}
         >
@@ -123,9 +136,9 @@ export function AISearchInput(props: ComponentProps<'form'>) {
         <button
           type="submit"
           className={buttonVariants({
-            color: 'primary',
-            size: 'icon',
-            className: 'mt-2 transition-all',
+            color: "primary",
+            size: "icon",
+            className: "mt-2 transition-all",
           })}
           disabled={input.length === 0}
         >
@@ -136,9 +149,9 @@ export function AISearchInput(props: ComponentProps<'form'>) {
   );
 }
 
-function Input(props: ComponentProps<'textarea'>) {
+function Input(props: ComponentProps<"textarea">) {
   const ref = useRef<HTMLDivElement>(null);
-  const sharedClassName = cn('col-start-1 row-start-1', props.className);
+  const sharedClassName = cn("col-start-1 row-start-1", props.className);
 
   return (
     <div className="grid flex-1">
@@ -146,12 +159,12 @@ function Input(props: ComponentProps<'textarea'>) {
         id="nd-ai-input"
         {...props}
         className={cn(
-          'resize-none bg-transparent placeholder:text-fd-muted-foreground focus-visible:outline-none',
+          "resize-none bg-transparent placeholder:text-fd-muted-foreground focus-visible:outline-none",
           sharedClassName,
         )}
       />
-      <div ref={ref} className={cn(sharedClassName, 'invisible break-all')}>
-        {`${props.value?.toString() ?? ''}\n`}
+      <div ref={ref} className={cn(sharedClassName, "invisible break-all")}>
+        {`${props.value?.toString() ?? ""}\n`}
       </div>
     </div>
   );

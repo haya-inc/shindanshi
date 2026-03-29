@@ -5,7 +5,9 @@ const root = process.cwd();
 const registryPath = path.join(root, "docs/wiki-freshness-registry.json");
 const cachePath = path.join(root, ".link-cache.json");
 const registry = JSON.parse(fs.readFileSync(registryPath, "utf8"));
-const uniqueUrls = [...new Set(registry.entries.flatMap((entry) => entry.sourceUrls))];
+const uniqueUrls = [
+  ...new Set(registry.entries.flatMap((entry) => entry.sourceUrls)),
+];
 const userAgent = "shindanshi-wiki-link-check/1.0";
 const timeoutMs = 8000;
 const concurrency = 4;
@@ -63,7 +65,10 @@ async function requestUrl(url, method) {
 async function checkUrl(url) {
   // キャッシュが有効ならスキップ
   if (cache[url] && now - cache[url] < cacheTtlMs) {
-    return { level: "cached", message: `CACHED ${url} (有効期限 ${formatExpiry(cache[url])})` };
+    return {
+      level: "cached",
+      message: `CACHED ${url} (有効期限 ${formatExpiry(cache[url])})`,
+    };
   }
 
   try {
@@ -75,16 +80,29 @@ async function checkUrl(url) {
 
     if (result.ok || (result.status >= 300 && result.status < 400)) {
       cache[url] = now;
-      return { level: "ok", message: `OK ${url} -> ${result.status} (次回キャッシュ期限 ${formatExpiry(now)})` };
+      return {
+        level: "ok",
+        message: `OK ${url} -> ${result.status} (次回キャッシュ期限 ${formatExpiry(now)})`,
+      };
     }
 
     if (result.status === 404 || result.status === 410) {
       delete cache[url];
-      return { level: "error", message: `リンク切れの可能性があります: ${url} -> ${result.status}` };
+      return {
+        level: "error",
+        message: `リンク切れの可能性があります: ${url} -> ${result.status}`,
+      };
     }
 
-    if (result.status === 403 || result.status === 429 || result.status >= 500) {
-      return { level: "warning", message: `要確認: ${url} -> ${result.status}` };
+    if (
+      result.status === 403 ||
+      result.status === 429 ||
+      result.status >= 500
+    ) {
+      return {
+        level: "warning",
+        message: `要確認: ${url} -> ${result.status}`,
+      };
     }
 
     return { level: "warning", message: `要確認: ${url} -> ${result.status}` };
@@ -93,7 +111,10 @@ async function checkUrl(url) {
       return { level: "warning", message: `タイムアウト: ${url}` };
     }
 
-    return { level: "warning", message: `接続確認失敗: ${url} -> ${error.message}` };
+    return {
+      level: "warning",
+      message: `接続確認失敗: ${url} -> ${error.message}`,
+    };
   }
 }
 
@@ -111,7 +132,9 @@ async function runQueue(items, worker, limit) {
     }
   }
 
-  await Promise.all(Array.from({ length: Math.min(limit, items.length) }, runWorker));
+  await Promise.all(
+    Array.from({ length: Math.min(limit, items.length) }, runWorker),
+  );
   return results;
 }
 

@@ -22,7 +22,9 @@ function normalizeText(value: string) {
     .trim();
 }
 
-export async function loadStructuredData(page: SourcePage): Promise<StructuredData> {
+export async function loadStructuredData(
+  page: SourcePage,
+): Promise<StructuredData> {
   const data = page.data as {
     load?: () => Promise<{
       structuredData?: unknown;

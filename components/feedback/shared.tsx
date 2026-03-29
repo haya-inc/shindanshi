@@ -1,7 +1,10 @@
 "use client";
 
 import { useState, useTransition } from "react";
-import type { ActionResponse, FeedbackRequest } from "@/components/feedback/schema";
+import type {
+  ActionResponse,
+  FeedbackRequest,
+} from "@/components/feedback/schema";
 import { buttonVariants } from "@/components/ui/button";
 
 const feedbackErrorMessage = "Feedback の送信に失敗しました。";
@@ -100,7 +103,9 @@ export function useFeedbackSubmission() {
         const response = await postFeedback(request);
         onSuccess(request, response);
       } catch (error) {
-        setErrorMessage(error instanceof Error ? error.message : feedbackErrorMessage);
+        setErrorMessage(
+          error instanceof Error ? error.message : feedbackErrorMessage,
+        );
       }
     });
   }
@@ -141,7 +146,9 @@ function writeStoredValue<T>(storageKey: string, value: T | null) {
 }
 
 export function useStoredFeedback<T>(storageKey: string) {
-  const [value, setValue] = useState<T | null>(() => readStoredValue<T>(storageKey));
+  const [value, setValue] = useState<T | null>(() =>
+    readStoredValue<T>(storageKey),
+  );
 
   return {
     previous: value,

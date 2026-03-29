@@ -34,7 +34,8 @@ function positionGroup(
     const degree =
       nodes.length === 1
         ? (startDegree + endDegree) / 2
-        : startDegree + ((endDegree - startDegree) / (nodes.length - 1)) * index;
+        : startDegree +
+          ((endDegree - startDegree) / (nodes.length - 1)) * index;
     const radians = toRadians(degree);
 
     return {
@@ -98,7 +99,11 @@ function GroupList({
       </p>
       <div className="flex flex-wrap gap-2">
         {nodes.map((node) => (
-          <Link key={node.url} href={node.url} className="wiki-related-map-chip">
+          <Link
+            key={node.url}
+            href={node.url}
+            className="wiki-related-map-chip"
+          >
             <span>{node.title}</span>
           </Link>
         ))}
@@ -124,7 +129,9 @@ function GraphNode({
       }}
     >
       <span className="wiki-related-map-node-title">{node.title}</span>
-      <span className="wiki-related-map-node-relation">{relationLabel(node)}</span>
+      <span className="wiki-related-map-node-relation">
+        {relationLabel(node)}
+      </span>
     </Link>
   );
 }
@@ -138,17 +145,25 @@ export function DocsRelatedGraph({ graph }: DocsRelatedGraphProps) {
       <div className="space-y-3">
         <div className="space-y-1">
           <p className="wiki-related-map-kicker">Related Map</p>
-          <h2 className="text-xl font-semibold tracking-tight text-fd-foreground">関連マップ</h2>
+          <h2 className="text-xl font-semibold tracking-tight text-fd-foreground">
+            関連マップ
+          </h2>
           <p className="text-sm leading-7 text-fd-muted-foreground">
             このページから参照しているページと、このページを参照しているページをまとめています。
           </p>
         </div>
 
         <div className="flex flex-wrap gap-2 text-xs text-fd-muted-foreground">
-          <span className="wiki-related-map-meta">参照先 {graph.counts.outgoing} 件</span>
-          <span className="wiki-related-map-meta">被リンク {graph.counts.incoming} 件</span>
+          <span className="wiki-related-map-meta">
+            参照先 {graph.counts.outgoing} 件
+          </span>
+          <span className="wiki-related-map-meta">
+            被リンク {graph.counts.incoming} 件
+          </span>
           {graph.counts.hidden > 0 ? (
-            <span className="wiki-related-map-meta">主要 {graph.nodes.length} 件を表示</span>
+            <span className="wiki-related-map-meta">
+              主要 {graph.nodes.length} 件を表示
+            </span>
           ) : null}
         </div>
       </div>
@@ -160,7 +175,11 @@ export function DocsRelatedGraph({ graph }: DocsRelatedGraphProps) {
       </div>
 
       <div className="wiki-related-map-graph hidden md:block">
-        <svg className="wiki-related-map-lines" viewBox="0 0 100 100" aria-hidden="true">
+        <svg
+          className="wiki-related-map-lines"
+          viewBox="0 0 100 100"
+          aria-hidden="true"
+        >
           {graph.nodes.map((node) => {
             const positioned = positionedNodes.get(node.url);
 
@@ -182,7 +201,9 @@ export function DocsRelatedGraph({ graph }: DocsRelatedGraphProps) {
         </svg>
 
         <div className="wiki-related-map-center">
-          <span className="wiki-related-map-center-title">{graph.current.title}</span>
+          <span className="wiki-related-map-center-title">
+            {graph.current.title}
+          </span>
           <span className="wiki-related-map-node-relation">現在のページ</span>
         </div>
 
@@ -193,7 +214,9 @@ export function DocsRelatedGraph({ graph }: DocsRelatedGraphProps) {
             return null;
           }
 
-          return <GraphNode key={node.url} node={node} positioned={positioned} />;
+          return (
+            <GraphNode key={node.url} node={node} positioned={positioned} />
+          );
         })}
       </div>
     </section>

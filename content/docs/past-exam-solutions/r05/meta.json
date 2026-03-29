@@ -1,4 +1,13 @@
 {
   "title": "令和5年度（2023）",
-  "pages": ["index", "economics", "finance", "management", "operations", "business-law", "info-systems", "sme-policy"]
+  "pages": [
+    "index",
+    "economics",
+    "finance",
+    "management",
+    "operations",
+    "business-law",
+    "info-systems",
+    "sme-policy"
+  ]
 }

@@ -96,7 +96,10 @@ const structureRules = [
         label: "確認日時つきの読み方",
         patterns: [/^\d{4}-\d{2}-\d{2} 時点での読み方$/u],
       },
-      { label: "この wiki での運用ルール", patterns: [/^この wiki での運用ルール$/u] },
+      {
+        label: "この wiki での運用ルール",
+        patterns: [/^この wiki での運用ルール$/u],
+      },
       { label: "公式情報", patterns: [/^公式情報$/u] },
     ],
   },
@@ -149,7 +152,9 @@ export function extractLevel2Headings(content) {
 }
 
 function matchesAnyHeading(headings, patterns) {
-  return patterns.some((pattern) => headings.some((heading) => pattern.test(heading)));
+  return patterns.some((pattern) =>
+    headings.some((heading) => pattern.test(heading)),
+  );
 }
 
 export function findMissingSections(headings, requiredSections) {
@@ -169,7 +174,10 @@ function validateRule(rule) {
 
     const content = fs.readFileSync(filePath, "utf8");
     const headings = extractLevel2Headings(content);
-    const missingSections = findMissingSections(headings, rule.requiredSections);
+    const missingSections = findMissingSections(
+      headings,
+      rule.requiredSections,
+    );
 
     if (missingSections.length > 0) {
       errors.push(
@@ -202,6 +210,9 @@ function main() {
   }
 }
 
-if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+if (
+  process.argv[1] &&
+  import.meta.url === pathToFileURL(process.argv[1]).href
+) {
   main();
 }

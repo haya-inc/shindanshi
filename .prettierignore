@@ -10,5 +10,10 @@ build/
 node_modules/
 pnpm-lock.yaml
 
-# 参照資料（フォーマット対象外）
+# 参照資料・内部ドキュメント（フォーマット対象外）
 _book/
+docs/
+
+# MDX（Prettier が JSX+Markdown 混在構造を壊すため対象外）
+# MDX の lint は eslint-plugin-mdx + remark-lint でカバー
+*.mdx

@@ -106,7 +106,9 @@ export const getDocsGraphData = cache(() => {
   for (const [url, linked] of incoming) {
     incoming.set(
       url,
-      [...new Set(linked)].sort((left, right) => comparePages(left, right, pagesByUrl)),
+      [...new Set(linked)].sort((left, right) =>
+        comparePages(left, right, pagesByUrl),
+      ),
     );
   }
 
@@ -121,7 +123,9 @@ function take(urls: string[], limit: number) {
   return urls.slice(0, limit);
 }
 
-export function getRelatedDocsGraph(currentUrl: string): RelatedDocsGraph | null {
+export function getRelatedDocsGraph(
+  currentUrl: string,
+): RelatedDocsGraph | null {
   const graph = getDocsGraphData();
   const current = graph.pagesByUrl.get(currentUrl);
 
@@ -164,11 +168,11 @@ export function getRelatedDocsGraph(currentUrl: string): RelatedDocsGraph | null
       outgoing: outgoing.length,
       hidden:
         shared.length -
-          Math.min(shared.length, 3) +
+        Math.min(shared.length, 3) +
         outgoingOnly.length -
-          Math.min(outgoingOnly.length, 4) +
+        Math.min(outgoingOnly.length, 4) +
         incomingOnly.length -
-          Math.min(incomingOnly.length, 4),
+        Math.min(incomingOnly.length, 4),
     },
     nodes,
   };

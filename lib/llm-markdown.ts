@@ -74,7 +74,10 @@ function getAttribute(attributes: string, name: string) {
 function cleanupInlineMdx(value: string) {
   return normalizeInlineText(
     value
-      .replace(/<code>([\s\S]*?)<\/code>/g, (_, code: string) => `\`${normalizeInlineText(code)}\``)
+      .replace(
+        /<code>([\s\S]*?)<\/code>/g,
+        (_, code: string) => `\`${normalizeInlineText(code)}\``,
+      )
       .replace(/<>|<\/>/g, "")
       .replace(/<br\s*\/?>/g, "\n"),
   );
@@ -83,17 +86,28 @@ function cleanupInlineMdx(value: string) {
 function cleanupBlockMdx(value: string) {
   return normalizeText(
     value
-      .replace(/<code>([\s\S]*?)<\/code>/g, (_, code: string) => `\`${normalizeInlineText(code)}\``)
+      .replace(
+        /<code>([\s\S]*?)<\/code>/g,
+        (_, code: string) => `\`${normalizeInlineText(code)}\``,
+      )
       .replace(/<>|<\/>/g, "")
       .replace(/^<div\b[^>]*\/>\s*$/gm, "")
       .replace(/^<\/?[A-Z][A-Za-z0-9]*(?:\s+[^>]*)?>\s*$/gm, ""),
   );
 }
 
-function renderTitledBlock(title: string | undefined, body: string, href?: string) {
+function renderTitledBlock(
+  title: string | undefined,
+  body: string,
+  href?: string,
+) {
   const cleanTitle = title?.trim();
   const cleanBody = cleanupBlockMdx(body);
-  const heading = cleanTitle ? (href ? `[${cleanTitle}](${href})` : cleanTitle) : undefined;
+  const heading = cleanTitle
+    ? href
+      ? `[${cleanTitle}](${href})`
+      : cleanTitle
+    : undefined;
 
   if (heading && cleanBody) {
     return `### ${heading}\n\n${cleanBody}`;
@@ -107,60 +121,86 @@ function renderTitledBlock(title: string | undefined, body: string, href?: strin
 }
 
 function convertTypeTables(value: string) {
-  return value.replace(/<TypeTable\b[^>]*type=\{\{([\s\S]*?)\}\}[^>]*\/>/g, (_, body: string) => {
-    const rows = Array.from(body.matchAll(/^\s*([^:\n]+):\s*\{([\s\S]*?)^\s*\},?$/gm));
-
-    if (rows.length === 0) {
-      return "";
-    }
-
-    const lines = [
-      "| 項目 | 種別 | 説明 | 必須 |",
-      "| --- | --- | --- | --- |",
-    ];
-
-    for (const [, key, fields] of rows) {
-      const type = fields.match(/type:\s*([\s\S]*?),\s*description:/)?.[1];
-      const description = fields.match(/description:\s*([\s\S]*?),\s*required:/)?.[1];
-      const required = fields.match(/required:\s*(true|false)/)?.[1];
-
-      lines.push(
-        `| ${cleanupInlineMdx(key)} | ${cleanupInlineMdx(type ?? "")} | ${cleanupInlineMdx(description ?? "")} | ${required === "true" ? "はい" : "いいえ"} |`,
+  return value.replace(
+    /<TypeTable\b[^>]*type=\{\{([\s\S]*?)\}\}[^>]*\/>/g,
+    (_, body: string) => {
+      const rows = Array.from(
+        body.matchAll(/^\s*([^:\n]+):\s*\{([\s\S]*?)^\s*\},?$/gm),
       );
-    }
 
-    return lines.join("\n");
-  });
+      if (rows.length === 0) {
+        return "";
+      }
+
+      const lines = [
+        "| 項目 | 種別 | 説明 | 必須 |",
+        "| --- | --- | --- | --- |",
+      ];
+
+      for (const [, key, fields] of rows) {
+        const type = fields.match(/type:\s*([\s\S]*?),\s*description:/)?.[1];
+        const description = fields.match(
+          /description:\s*([\s\S]*?),\s*required:/,
+        )?.[1];
+        const required = fields.match(/required:\s*(true|false)/)?.[1];
+
+        lines.push(
+          `| ${cleanupInlineMdx(key)} | ${cleanupInlineMdx(type ?? "")} | ${cleanupInlineMdx(description ?? "")} | ${required === "true" ? "はい" : "いいえ"} |`,
+        );
+      }
+
+      return lines.join("\n");
+    },
+  );
 }
 
 export function sanitizeMdxForLlm(value: string) {
   let text = normalizeText(stripFrontmatter(value));
 
   text = convertTypeTables(text);
-  text = text.replace(/^[ \t]*<Callout\b([^>]*)>([\s\S]*?)<\/Callout>[ \t]*$/gm, (_, attributes: string, body: string) => {
-    const title = getAttribute(attributes, "title");
-    const cleanBody = cleanupBlockMdx(body);
+  text = text.replace(
+    /^[ \t]*<Callout\b([^>]*)>([\s\S]*?)<\/Callout>[ \t]*$/gm,
+    (_, attributes: string, body: string) => {
+      const title = getAttribute(attributes, "title");
+      const cleanBody = cleanupBlockMdx(body);
 
-    if (!title) {
-      return cleanBody;
-    }
+      if (!title) {
+        return cleanBody;
+      }
 
-    if (!cleanBody) {
-      return `**${title}**`;
-    }
+      if (!cleanBody) {
+        return `**${title}**`;
+      }
 
-    return `**${title}**\n\n${cleanBody}`;
-  });
-  text = text.replace(/^[ \t]*<Accordion\b([^>]*)>([\s\S]*?)<\/Accordion>[ \t]*$/gm, (_, attributes: string, body: string) =>
-    renderTitledBlock(getAttribute(attributes, "title"), body),
+      return `**${title}**\n\n${cleanBody}`;
+    },
   );
-  text = text.replace(/^[ \t]*<Tab\b([^>]*)>([\s\S]*?)<\/Tab>[ \t]*$/gm, (_, attributes: string, body: string) =>
-    renderTitledBlock(getAttribute(attributes, "title") ?? getAttribute(attributes, "value"), body),
+  text = text.replace(
+    /^[ \t]*<Accordion\b([^>]*)>([\s\S]*?)<\/Accordion>[ \t]*$/gm,
+    (_, attributes: string, body: string) =>
+      renderTitledBlock(getAttribute(attributes, "title"), body),
   );
-  text = text.replace(/^[ \t]*<Card\b([^>]*)>([\s\S]*?)<\/Card>[ \t]*$/gm, (_, attributes: string, body: string) =>
-    renderTitledBlock(getAttribute(attributes, "title"), body, getAttribute(attributes, "href")),
+  text = text.replace(
+    /^[ \t]*<Tab\b([^>]*)>([\s\S]*?)<\/Tab>[ \t]*$/gm,
+    (_, attributes: string, body: string) =>
+      renderTitledBlock(
+        getAttribute(attributes, "title") ?? getAttribute(attributes, "value"),
+        body,
+      ),
   );
-  text = text.replace(/^[ \t]*<Step\b[^>]*>([\s\S]*?)<\/Step>[ \t]*$/gm, (_, body: string) => cleanupBlockMdx(body));
+  text = text.replace(
+    /^[ \t]*<Card\b([^>]*)>([\s\S]*?)<\/Card>[ \t]*$/gm,
+    (_, attributes: string, body: string) =>
+      renderTitledBlock(
+        getAttribute(attributes, "title"),
+        body,
+        getAttribute(attributes, "href"),
+      ),
+  );
+  text = text.replace(
+    /^[ \t]*<Step\b[^>]*>([\s\S]*?)<\/Step>[ \t]*$/gm,
+    (_, body: string) => cleanupBlockMdx(body),
+  );
   text = text
     .replace(/<\/?(Cards|Steps|Tabs|Accordions)\b[^>]*>/g, "")
     .replace(/^<div\b[^>]*\/>\s*$/gm, "")

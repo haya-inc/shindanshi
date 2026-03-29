@@ -3,7 +3,11 @@
 import { usePathname } from "next/navigation";
 import { useState, type ReactNode } from "react";
 import type { FeedbackBlockProps as RemarkFeedbackBlockProps } from "fumadocs-core/mdx-plugins/remark-feedback-block";
-import type { ActionResponse, BlockFeedback, BlockFeedbackRequest } from "@/components/feedback/schema";
+import type {
+  ActionResponse,
+  BlockFeedback,
+  BlockFeedbackRequest,
+} from "@/components/feedback/schema";
 import {
   FeedbackSubmittedActions,
   useFeedbackSubmission,
@@ -20,10 +24,16 @@ type StoredBlockFeedback = BlockFeedback & {
   response?: ActionResponse;
 };
 
-export function FeedbackBlock({ id, body, children }: FeedbackBlockComponentProps) {
+export function FeedbackBlock({
+  id,
+  body,
+  children,
+}: FeedbackBlockComponentProps) {
   const pathname = usePathname();
   const blockId = `${pathname}-${id}`;
-  const storage = useStoredFeedback<StoredBlockFeedback>(`docs-feedback-block-${blockId}`);
+  const storage = useStoredFeedback<StoredBlockFeedback>(
+    `docs-feedback-block-${blockId}`,
+  );
   const [message, setMessage] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const { errorMessage, isPending, submit } = useFeedbackSubmission();
@@ -85,7 +95,9 @@ export function FeedbackBlock({ id, body, children }: FeedbackBlockComponentProp
         <div className="absolute right-0 top-0 z-20 w-full max-w-sm rounded-2xl border border-fd-border bg-fd-popover p-3 shadow-xl">
           {storage.previous ? (
             <div className="space-y-3 text-sm">
-              <p className="text-fd-foreground">送信しました。次の改善に使います。</p>
+              <p className="text-fd-foreground">
+                送信しました。次の改善に使います。
+              </p>
               <FeedbackSubmittedActions
                 githubUrl={storage.previous.response?.githubUrl}
                 onReset={() => storage.setPrevious(null)}
@@ -95,7 +107,9 @@ export function FeedbackBlock({ id, body, children }: FeedbackBlockComponentProp
           ) : (
             <div className="space-y-3">
               <div className="space-y-1">
-                <p className="text-sm font-medium text-fd-foreground">このブロックへの Feedback</p>
+                <p className="text-sm font-medium text-fd-foreground">
+                  このブロックへの Feedback
+                </p>
                 <p className="text-xs text-fd-muted-foreground">
                   分かりにくかった点や不足していた点を短く書いてください。
                 </p>
@@ -123,7 +137,9 @@ export function FeedbackBlock({ id, body, children }: FeedbackBlockComponentProp
                   閉じる
                 </button>
               </div>
-              {errorMessage ? <p className="text-sm text-red-600">{errorMessage}</p> : null}
+              {errorMessage ? (
+                <p className="text-sm text-red-600">{errorMessage}</p>
+              ) : null}
             </div>
           )}
         </div>

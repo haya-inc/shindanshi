@@ -1,4 +1,13 @@
 {
   "title": "令和4年度（2022）",
-  "pages": ["index", "economics", "finance", "management", "operations", "business-law", "info-systems", "sme-policy"]
+  "pages": [
+    "index",
+    "economics",
+    "finance",
+    "management",
+    "operations",
+    "business-law",
+    "info-systems",
+    "sme-policy"
+  ]
 }

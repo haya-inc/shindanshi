@@ -70,7 +70,8 @@ const desktopRouteGroups = {
       selector: "h2",
     },
     {
-      route: "/finance-and-accounting/bookkeeping-basics-account-categories-and-journal-entries",
+      route:
+        "/finance-and-accounting/bookkeeping-basics-account-categories-and-journal-entries",
       markerText: "5分類と仕訳",
       selector: "article",
     },
@@ -85,7 +86,8 @@ const desktopRouteGroups = {
       selector: "article",
     },
     {
-      route: "/finance-and-accounting/corporate-accounting-financial-statements-and-five-profits",
+      route:
+        "/finance-and-accounting/corporate-accounting-financial-statements-and-five-profits",
       markerText: "財務諸表と5段階利益",
       selector: "article",
     },
@@ -95,12 +97,14 @@ const desktopRouteGroups = {
       selector: "article",
     },
     {
-      route: "/finance-and-accounting/corporate-accounting-liabilities-equity-and-tax-effect",
+      route:
+        "/finance-and-accounting/corporate-accounting-liabilities-equity-and-tax-effect",
       markerText: "負債・純資産会計と税効果会計",
       selector: "article",
     },
     {
-      route: "/finance-and-accounting/corporate-accounting-principles-and-consolidation",
+      route:
+        "/finance-and-accounting/corporate-accounting-principles-and-consolidation",
       markerText: "企業会計原則と連結会計",
       selector: "article",
     },
@@ -112,12 +116,14 @@ const desktopRouteGroups = {
       selector: "h2",
     },
     {
-      route: "/economics-and-economic-policy/microeconomics-practice-basic-check",
+      route:
+        "/economics-and-economic-policy/microeconomics-practice-basic-check",
       markerText: "基本確認問題",
       selector: "h2",
     },
     {
-      route: "/economics-and-economic-policy/microeconomics-knowledge-market-mechanism",
+      route:
+        "/economics-and-economic-policy/microeconomics-knowledge-market-mechanism",
       markerText: "市場メカニズムの基礎",
       selector: "article",
     },
@@ -129,27 +135,32 @@ const desktopRouteGroups = {
       selector: "h2",
     },
     {
-      route: "/business-management-theory/knowledge-strategic-planning-and-swot",
+      route:
+        "/business-management-theory/knowledge-strategic-planning-and-swot",
       markerText: "経営計画とSWOT",
       selector: "article",
     },
     {
-      route: "/business-management-theory/knowledge-corporate-and-growth-strategy",
+      route:
+        "/business-management-theory/knowledge-corporate-and-growth-strategy",
       markerText: "全社戦略と成長戦略",
       selector: "article",
     },
     {
-      route: "/business-management-theory/knowledge-competitive-and-resource-strategy",
+      route:
+        "/business-management-theory/knowledge-competitive-and-resource-strategy",
       markerText: "競争戦略と経営資源戦略",
       selector: "article",
     },
     {
-      route: "/business-management-theory/knowledge-innovation-international-and-digital-strategy",
+      route:
+        "/business-management-theory/knowledge-innovation-international-and-digital-strategy",
       markerText: "イノベーション・国際経営・デジタル戦略",
       selector: "article",
     },
     {
-      route: "/business-management-theory/knowledge-organizational-structure-and-design",
+      route:
+        "/business-management-theory/knowledge-organizational-structure-and-design",
       markerText: "組織構造と組織設計",
       selector: "article",
     },
@@ -169,7 +180,8 @@ const desktopRouteGroups = {
       selector: "article",
     },
     {
-      route: "/business-management-theory/knowledge-organizational-culture-and-change",
+      route:
+        "/business-management-theory/knowledge-organizational-culture-and-change",
       markerText: "組織文化と組織変革",
       selector: "article",
     },
@@ -179,7 +191,8 @@ const desktopRouteGroups = {
       selector: "article",
     },
     {
-      route: "/business-management-theory/knowledge-marketing-research-and-consumer-behavior",
+      route:
+        "/business-management-theory/knowledge-marketing-research-and-consumer-behavior",
       markerText: "マーケティングリサーチと消費者行動",
       selector: "article",
     },
@@ -189,7 +202,8 @@ const desktopRouteGroups = {
       selector: "article",
     },
     {
-      route: "/business-management-theory/knowledge-channel-and-promotion-strategy",
+      route:
+        "/business-management-theory/knowledge-channel-and-promotion-strategy",
       markerText: "チャネル戦略とプロモーション戦略",
       selector: "article",
     },
@@ -216,17 +230,20 @@ const desktopRouteGroups = {
       selector: "article",
     },
     {
-      route: "/business-law/knowledge-corporate-organs-and-shareholder-meetings",
+      route:
+        "/business-law/knowledge-corporate-organs-and-shareholder-meetings",
       markerText: "機関設計と株主総会決議",
       selector: "article",
     },
     {
-      route: "/business-law/knowledge-fundraising-dividends-and-financial-statements",
+      route:
+        "/business-law/knowledge-fundraising-dividends-and-financial-statements",
       markerText: "資金調達・配当・計算書類",
       selector: "article",
     },
     {
-      route: "/business-law/knowledge-corporate-reorganization-and-business-transfer",
+      route:
+        "/business-law/knowledge-corporate-reorganization-and-business-transfer",
       markerText: "組織再編と事業譲渡",
       selector: "article",
     },
@@ -348,12 +365,14 @@ const desktopRouteGroups = {
       selector: "article",
     },
     {
-      route: "/management-information-systems/knowledge-information-security-basics",
+      route:
+        "/management-information-systems/knowledge-information-security-basics",
       markerText: "情報セキュリティの基礎",
       selector: "article",
     },
     {
-      route: "/management-information-systems/knowledge-ai-and-machine-learning-basics",
+      route:
+        "/management-information-systems/knowledge-ai-and-machine-learning-basics",
       markerText: "AI・機械学習の基礎",
       selector: "article",
     },
@@ -365,7 +384,8 @@ const desktopRouteGroups = {
       selector: "h2",
     },
     {
-      route: "/operations-management/knowledge-production-systems-and-planning-control",
+      route:
+        "/operations-management/knowledge-production-systems-and-planning-control",
       markerText: "生産方式と計画統制",
       selector: "article",
     },
@@ -375,7 +395,8 @@ const desktopRouteGroups = {
       selector: "article",
     },
     {
-      route: "/operations-management/knowledge-materials-and-inventory-management",
+      route:
+        "/operations-management/knowledge-materials-and-inventory-management",
       markerText: "資材・在庫管理",
       selector: "article",
     },
@@ -400,12 +421,14 @@ const desktopRouteGroups = {
       selector: "article",
     },
     {
-      route: "/operations-management/knowledge-equipment-management-and-productivity",
+      route:
+        "/operations-management/knowledge-equipment-management-and-productivity",
       markerText: "設備管理と生産性向上",
       selector: "article",
     },
     {
-      route: "/operations-management/knowledge-purchasing-and-outsourcing-management",
+      route:
+        "/operations-management/knowledge-purchasing-and-outsourcing-management",
       markerText: "購買・外注管理",
       selector: "article",
     },
@@ -420,7 +443,8 @@ const desktopRouteGroups = {
       selector: "article",
     },
     {
-      route: "/operations-management/knowledge-sales-indicators-logistics-and-retail-information-systems",
+      route:
+        "/operations-management/knowledge-sales-indicators-logistics-and-retail-information-systems",
       markerText: "販売管理指標・物流・流通情報システム",
       selector: "article",
     },
@@ -432,7 +456,8 @@ const desktopRouteGroups = {
       selector: "h2",
     },
     {
-      route: "/sme-management-and-policy/policy-human-resources-and-employment-support",
+      route:
+        "/sme-management-and-policy/policy-human-resources-and-employment-support",
       markerText: "採用・定着を支える助成",
       selector: "article",
     },
@@ -582,9 +607,16 @@ async function openStablePage(page: Page, route: string, errors: string[]) {
   await assertStablePage(page, errors);
 }
 
-async function measureContrast(page: Page, textSelector: string, surfaceSelector: string) {
+async function measureContrast(
+  page: Page,
+  textSelector: string,
+  surfaceSelector: string,
+) {
   return page.evaluate(
-    ({ textSelector: currentTextSelector, surfaceSelector: currentSurfaceSelector }) => {
+    ({
+      textSelector: currentTextSelector,
+      surfaceSelector: currentSurfaceSelector,
+    }) => {
       type Color = {
         r: number;
         g: number;
@@ -593,7 +625,9 @@ async function measureContrast(page: Page, textSelector: string, surfaceSelector
       };
 
       function parseColor(value: string): Color {
-        const srgbMatch = value.match(/color\(srgb\s+([^\s/]+)\s+([^\s/]+)\s+([^\s/)]+)(?:\s*\/\s*([^\s)]+))?\)/u);
+        const srgbMatch = value.match(
+          /color\(srgb\s+([^\s/]+)\s+([^\s/]+)\s+([^\s/)]+)(?:\s*\/\s*([^\s)]+))?\)/u,
+        );
 
         if (srgbMatch) {
           const [, red, green, blue, alpha] = srgbMatch;
@@ -653,39 +687,61 @@ async function measureContrast(page: Page, textSelector: string, surfaceSelector
         return (lighter + 0.05) / (darker + 0.05);
       }
 
-      const textElement = document.querySelector<HTMLElement>(currentTextSelector);
-      const surfaceElement = document.querySelector<HTMLElement>(currentSurfaceSelector);
+      const textElement =
+        document.querySelector<HTMLElement>(currentTextSelector);
+      const surfaceElement = document.querySelector<HTMLElement>(
+        currentSurfaceSelector,
+      );
 
       if (!textElement || !surfaceElement) {
         throw new Error("コントラスト測定対象が見つかりません");
       }
 
       const textColor = parseColor(window.getComputedStyle(textElement).color);
-      const surfaceColor = parseColor(window.getComputedStyle(surfaceElement).backgroundColor);
-      const bodyColor = parseColor(window.getComputedStyle(document.body).backgroundColor);
+      const surfaceColor = parseColor(
+        window.getComputedStyle(surfaceElement).backgroundColor,
+      );
+      const bodyColor = parseColor(
+        window.getComputedStyle(document.body).backgroundColor,
+      );
       const effectiveSurface =
-        surfaceColor.a < 1 ? compositeColor(surfaceColor, bodyColor) : surfaceColor;
-      const effectiveText = textColor.a < 1 ? compositeColor(textColor, effectiveSurface) : textColor;
+        surfaceColor.a < 1
+          ? compositeColor(surfaceColor, bodyColor)
+          : surfaceColor;
+      const effectiveText =
+        textColor.a < 1
+          ? compositeColor(textColor, effectiveSurface)
+          : textColor;
 
       return contrastRatio(effectiveText, effectiveSurface);
     },
-    { textSelector, surfaceSelector }
+    { textSelector, surfaceSelector },
   );
 }
 
 test.describe("docs ui smoke", () => {
-  for (const { route, markerText, selector, headingLevel = 1 } of desktopRoutes) {
+  for (const {
+    route,
+    markerText,
+    selector,
+    headingLevel = 1,
+  } of desktopRoutes) {
     test(`desktop ${route}`, async ({ page }) => {
       const errors = attachBrowserErrorCollectors(page);
 
       await page.setViewportSize({ width: 1440, height: 1100 });
       await openStablePage(page, route, errors);
       await expect(
-        page.locator("article").getByRole("heading", { level: headingLevel }).first()
+        page
+          .locator("article")
+          .getByRole("heading", { level: headingLevel })
+          .first(),
       ).toBeVisible({ timeout: renderTimeout });
-      await expect(page.locator(selector).first()).toBeVisible({ timeout: renderTimeout });
+      await expect(page.locator(selector).first()).toBeVisible({
+        timeout: renderTimeout,
+      });
       await expect(
-        page.locator("article").getByText(markerText, { exact: false }).first()
+        page.locator("article").getByText(markerText, { exact: false }).first(),
       ).toBeVisible({ timeout: renderTimeout });
     });
   }
@@ -713,8 +769,16 @@ test.describe("docs ui smoke", () => {
     await page.setViewportSize({ width: 1280, height: 960 });
     await page.emulateMedia({ colorScheme: "dark" });
     await openStablePage(page, uiScenarioRoutes.darkModeReadingNode, errors);
-    await expect(page.locator("article").getByRole("heading", { level: 1, name: "与件文の読み方" })).toBeVisible();
-    await expect(page.locator("article").getByRole("heading", { level: 2, name: "学習のポイント" })).toBeVisible();
+    await expect(
+      page
+        .locator("article")
+        .getByRole("heading", { level: 1, name: "与件文の読み方" }),
+    ).toBeVisible();
+    await expect(
+      page
+        .locator("article")
+        .getByRole("heading", { level: 2, name: "学習のポイント" }),
+    ).toBeVisible();
   });
 
   test("keyboard focus stays visible on docs home", async ({ page }) => {
@@ -747,7 +811,7 @@ test.describe("docs ui smoke", () => {
     expect(
       focusState?.outlineStyle !== "none" ||
         focusState?.outlineWidth !== "0px" ||
-        focusState?.boxShadow !== "none"
+        focusState?.boxShadow !== "none",
     ).toBeTruthy();
   });
 
@@ -770,8 +834,12 @@ test.describe("docs ui smoke", () => {
 
     const submitButton = page.getByRole("button", { name: "Feedback を送る" });
 
-    await expect(page.getByRole("button", { name: "役に立った" })).toBeVisible();
-    await expect(page.getByRole("button", { name: "改善が必要" })).toBeVisible();
+    await expect(
+      page.getByRole("button", { name: "役に立った" }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("button", { name: "改善が必要" }),
+    ).toBeVisible();
     await expect(submitButton).toBeDisabled();
 
     await page.getByRole("button", { name: "役に立った" }).click();
@@ -783,26 +851,38 @@ test.describe("docs ui smoke", () => {
 
     await page.setViewportSize({ width: 1440, height: 1100 });
 
-    await openStablePage(page, uiScenarioRoutes.bannerAndMath.bannerPages[0], errors);
+    await openStablePage(
+      page,
+      uiScenarioRoutes.bannerAndMath.bannerPages[0],
+      errors,
+    );
     await expect(
-      page.getByText("制度情報と日程は毎年更新されます。", { exact: false })
+      page.getByText("制度情報と日程は毎年更新されます。", { exact: false }),
     ).toBeVisible();
     await expect(
-      page.getByText("制度情報は一次情報で最終確認する", { exact: false })
+      page.getByText("制度情報は一次情報で最終確認する", { exact: false }),
     ).toBeVisible();
 
-    await openStablePage(page, uiScenarioRoutes.bannerAndMath.bannerPages[1], errors);
+    await openStablePage(
+      page,
+      uiScenarioRoutes.bannerAndMath.bannerPages[1],
+      errors,
+    );
     await expect(
-      page.getByText("制度情報は一次情報で最終確認する", { exact: false })
+      page.getByText("制度情報は一次情報で最終確認する", { exact: false }),
     ).toBeVisible();
 
     for (const route of uiScenarioRoutes.bannerAndMath.mathPages) {
       await openStablePage(page, route, errors);
-      await expect(page.locator(".katex, .katex-display").first()).toBeVisible();
+      await expect(
+        page.locator(".katex, .katex-display").first(),
+      ).toBeVisible();
     }
   });
 
-  test("reference page exposes complementary and article landmarks", async ({ page }) => {
+  test("reference page exposes complementary and article landmarks", async ({
+    page,
+  }) => {
     const errors = attachBrowserErrorCollectors(page);
 
     await page.setViewportSize({ width: 1280, height: 960 });
@@ -810,7 +890,9 @@ test.describe("docs ui smoke", () => {
 
     const landmarks = await page.evaluate(() => {
       return {
-        complementary: document.querySelectorAll("aside, [role='complementary']").length,
+        complementary: document.querySelectorAll(
+          "aside, [role='complementary']",
+        ).length,
         article: document.querySelectorAll("article").length,
       };
     });
@@ -819,7 +901,9 @@ test.describe("docs ui smoke", () => {
     expect(landmarks.article).toBeGreaterThan(0);
   });
 
-  test("reference copy keeps readable contrast in light and dark", async ({ page }) => {
+  test("reference copy keeps readable contrast in light and dark", async ({
+    page,
+  }) => {
     const errors = attachBrowserErrorCollectors(page);
 
     await page.setViewportSize({ width: 1280, height: 960 });

@@ -66,7 +66,9 @@ export function resolveRelativeDocHref(filePath, href) {
   const fileRelativePath = toPosixPath(path.relative(docsRoot, filePath));
   const dirRelativePath = path.posix.dirname(fileRelativePath);
   const [pathname, hash] = href.split("#", 2);
-  const resolvedPath = path.posix.normalize(path.posix.join(dirRelativePath, pathname));
+  const resolvedPath = path.posix.normalize(
+    path.posix.join(dirRelativePath, pathname),
+  );
   const resolvedUrl = toDocUrlFromRelativePath(resolvedPath);
 
   return hash ? `${resolvedUrl}#${hash}` : resolvedUrl;
@@ -77,18 +79,29 @@ export function normalizeDocRelativeLinks(filePath, content) {
   const resolveHref = (href) => resolveRelativeDocHref(filePath, href);
 
   return content
-    .replace(relativeMarkdownLinkPattern, (_matched, href) => `](${resolveHref(href)})`)
-    .replace(relativeDoubleQuotedHrefPattern, (_matched, href) => `href="${resolveHref(href)}"`)
-    .replace(relativeSingleQuotedHrefPattern, (_matched, href) => `href='${resolveHref(href)}'`);
+    .replace(
+      relativeMarkdownLinkPattern,
+      (_matched, href) => `](${resolveHref(href)})`,
+    )
+    .replace(
+      relativeDoubleQuotedHrefPattern,
+      (_matched, href) => `href="${resolveHref(href)}"`,
+    )
+    .replace(
+      relativeSingleQuotedHrefPattern,
+      (_matched, href) => `href='${resolveHref(href)}'`,
+    );
 }
 
 function stripMath(content) {
-  return content
-    // ブロック数式: 行頭（インデント可）に $$ だけの行で囲まれた部分を除去
-    .replace(/^[ \t]*\$\$\s*\n[\s\S]*?\n[ \t]*\$\$\s*$/gmu, "")
-    // インライン表示数式: 1行内の $$...$$ を除去
-    .replace(/\$\$[^$\n]+\$\$/gu, "")
-    .replace(/(?<!\$)\$[^$\n]+\$(?!\$)/gu, "");
+  return (
+    content
+      // ブロック数式: 行頭（インデント可）に $$ だけの行で囲まれた部分を除去
+      .replace(/^[ \t]*\$\$\s*\n[\s\S]*?\n[ \t]*\$\$\s*$/gmu, "")
+      // インライン表示数式: 1行内の $$...$$ を除去
+      .replace(/\$\$[^$\n]+\$\$/gu, "")
+      .replace(/(?<!\$)\$[^$\n]+\$(?!\$)/gu, "")
+  );
 }
 
 function toPopulateValue(url) {
@@ -151,7 +164,10 @@ function escapeNonTagAngleBrackets(content) {
 }
 
 export function createValidationContent(filePath, content) {
-  return normalizeDocRelativeLinks(filePath, escapeNonTagAngleBrackets(stripMath(content)));
+  return normalizeDocRelativeLinks(
+    filePath,
+    escapeNonTagAngleBrackets(stripMath(content)),
+  );
 }
 
 async function getFiles() {
@@ -204,6 +220,9 @@ export async function main() {
   printErrors(results, true);
 }
 
-if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+if (
+  process.argv[1] &&
+  import.meta.url === pathToFileURL(process.argv[1]).href
+) {
   await main();
 }

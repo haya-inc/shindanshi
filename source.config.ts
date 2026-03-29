@@ -11,9 +11,7 @@ import remarkMath from "remark-math";
  * デフォルトの lastModified はファイルごとに git プロセスを spawn するため、
  * 347ファイル分のオーバーヘッドを1プロセスに削減する。
  */
-function createBatchGitTimestamp(): (
-  filePath: string,
-) => Promise<Date | null> {
+function createBatchGitTimestamp(): (filePath: string) => Promise<Date | null> {
   let cache: Map<string, Date> | null = null;
 
   function loadAll(): Map<string, Date> {

@@ -57,7 +57,9 @@ function pickSearchPages(urls: string[]) {
     .filter((page): page is SourcePage => page !== undefined);
 }
 
-async function buildSearchToolOutput(page: SourcePage): Promise<SearchToolOutput> {
+async function buildSearchToolOutput(
+  page: SourcePage,
+): Promise<SearchToolOutput> {
   const text = await getLLMText(page);
 
   return {
@@ -79,7 +81,8 @@ async function searchWikiPages(query: string, limit: number) {
 }
 
 const searchTool = tool({
-  description: "学習 wiki から関連ページを探し、AI が読める Markdown を返します。",
+  description:
+    "学習 wiki から関連ページを探し、AI が読める Markdown を返します。",
   inputSchema: z.object({
     query: z.string().min(1),
     limit: z.number().int().min(1).max(8).default(4),
@@ -130,7 +133,10 @@ export async function POST(req: Request) {
 const repairSearchToolCall: ToolCallRepairFunction<{
   search: typeof searchTool;
 }> = async ({ error, messages, system, toolCall }) => {
-  if (toolCall.toolName !== "search" || !InvalidToolInputError.isInstance(error)) {
+  if (
+    toolCall.toolName !== "search" ||
+    !InvalidToolInputError.isInstance(error)
+  ) {
     return null;
   }
 
@@ -175,7 +181,9 @@ const repairSearchToolCall: ToolCallRepairFunction<{
     tools: chatTools,
   });
 
-  const repairedToolCall = result.toolCalls.find((candidate) => candidate.toolName === "search");
+  const repairedToolCall = result.toolCalls.find(
+    (candidate) => candidate.toolName === "search",
+  );
 
   if (repairedToolCall == null) {
     return null;

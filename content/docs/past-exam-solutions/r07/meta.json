@@ -1,4 +1,13 @@
 {
   "title": "令和7年度（2025）",
-  "pages": ["index", "economics", "finance", "management", "operations", "business-law", "info-systems", "sme-policy"]
+  "pages": [
+    "index",
+    "economics",
+    "finance",
+    "management",
+    "operations",
+    "business-law",
+    "info-systems",
+    "sme-policy"
+  ]
 }

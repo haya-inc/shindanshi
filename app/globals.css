@@ -733,7 +733,11 @@ a.wiki-card:hover {
 .wiki-index-jump:hover {
   transform: translateY(-1px);
   border-color: var(--line-strong);
-  background: color-mix(in srgb, var(--surface-strong) 88%, var(--color-fd-accent) 12%);
+  background: color-mix(
+    in srgb,
+    var(--surface-strong) 88%,
+    var(--color-fd-accent) 12%
+  );
 }
 
 .wiki-index-jump-title {

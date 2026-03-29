@@ -1,5 +1,8 @@
 import type { InferPageType } from "fumadocs-core/source";
-import { formatStructuredDataMarkdown, loadStructuredData } from "@/lib/docs-structured-data";
+import {
+  formatStructuredDataMarkdown,
+  loadStructuredData,
+} from "@/lib/docs-structured-data";
 import { loadDocSourceMarkdown, sanitizeMdxForLlm } from "@/lib/llm-markdown";
 import { source } from "@/lib/source";
 
@@ -51,11 +54,7 @@ export async function getLLMText(page: SourcePage) {
   const description = page.data.description?.trim();
   const content = await resolveLLMContent(page);
 
-  return [
-    `# ${page.data.title} (${page.url})`,
-    description,
-    content,
-  ]
+  return [`# ${page.data.title} (${page.url})`, description, content]
     .filter((value) => value && value.length > 0)
     .join("\n\n");
 }

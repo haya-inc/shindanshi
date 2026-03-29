@@ -59,12 +59,12 @@
 
 一括実行なら `pnpm validate`（check → lint → build を順に実行）。個別に叩く場合は以下を参照。
 
-| コマンド | 内容 |
-|---|---|
-| `pnpm check` | wiki 構造・リンク・ドキュメントリンクをすべて検証 |
-| `pnpm lint` | eslint のみ |
-| `pnpm test` | Playwright による UI テスト（build + start を内包） |
-| `NEXT_DIST_DIR=.next-check pnpm build` | ビルド（競合回避用の出力先指定） |
+| コマンド                               | 内容                                                |
+| -------------------------------------- | --------------------------------------------------- |
+| `pnpm check`                           | wiki 構造・リンク・ドキュメントリンクをすべて検証   |
+| `pnpm lint`                            | eslint のみ                                         |
+| `pnpm test`                            | Playwright による UI テスト（build + start を内包） |
+| `NEXT_DIST_DIR=.next-check pnpm build` | ビルド（競合回避用の出力先指定）                    |
 
 - 変更した docs ルートは headless browser で `200` と `h1` を確認する（`pnpm test`）
 - 標準の `pnpm build` は、他のローカル Next.js サーバーが `.next` を使っていると `_buildManifest.js.tmp` 競合で落ちることがある。`NEXT_DIST_DIR=.next-check` を付けるか、`pnpm validate` を使う。
