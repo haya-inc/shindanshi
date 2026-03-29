@@ -1,0 +1,14 @@
+# ビルド成果物
+.next/
+.next-check/
+.next-playwright/
+out/
+build/
+
+# 自動生成
+.source/
+node_modules/
+pnpm-lock.yaml
+
+# 参照資料（フォーマット対象外）
+_book/

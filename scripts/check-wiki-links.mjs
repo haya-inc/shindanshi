@@ -11,6 +11,11 @@ const timeoutMs = 8000;
 const concurrency = 4;
 const cacheTtlMs = 7 * 24 * 60 * 60 * 1000; // 7日
 
+function formatExpiry(timestamp) {
+  const expiry = new Date(timestamp + cacheTtlMs);
+  return expiry.toISOString().slice(0, 10);
+}
+
 // --- キャッシュ読み込み ---
 
 function loadCache() {
@@ -58,7 +63,7 @@ async function requestUrl(url, method) {
 async function checkUrl(url) {
   // キャッシュが有効ならスキップ
   if (cache[url] && now - cache[url] < cacheTtlMs) {
-    return { level: "cached", message: `CACHED ${url}` };
+    return { level: "cached", message: `CACHED ${url} (有効期限 ${formatExpiry(cache[url])})` };
   }
 
   try {
@@ -70,7 +75,7 @@ async function checkUrl(url) {
 
     if (result.ok || (result.status >= 300 && result.status < 400)) {
       cache[url] = now;
-      return { level: "ok", message: `OK ${url} -> ${result.status}` };
+      return { level: "ok", message: `OK ${url} -> ${result.status} (次回キャッシュ期限 ${formatExpiry(now)})` };
     }
 
     if (result.status === 404 || result.status === 410) {
@@ -114,8 +119,10 @@ const results = await runQueue(uniqueUrls, checkUrl, concurrency);
 
 saveCache(cache);
 
-let hasError = false;
+let errorCount = 0;
+let warningCount = 0;
 let cachedCount = 0;
+let okCount = 0;
 
 for (const result of results) {
   if (result.level === "cached") {
@@ -125,22 +132,27 @@ for (const result of results) {
 
   if (result.level === "error") {
     console.error(result.message);
-    hasError = true;
+    errorCount += 1;
     continue;
   }
 
   if (result.level === "warning") {
     console.warn(result.message);
+    warningCount += 1;
     continue;
   }
 
+  okCount += 1;
   console.log(result.message);
 }
 
-if (cachedCount > 0) {
-  console.log(`${cachedCount} URL をキャッシュからスキップしました`);
-}
+const parts = [`${uniqueUrls.length} URL 中`];
+if (okCount > 0) parts.push(`OK ${okCount}`);
+if (cachedCount > 0) parts.push(`キャッシュ ${cachedCount}`);
+if (warningCount > 0) parts.push(`要確認 ${warningCount}`);
+if (errorCount > 0) parts.push(`エラー ${errorCount}`);
+console.log(parts.join(" / "));
 
-if (hasError) {
+if (errorCount > 0 || warningCount > 0) {
   process.exit(1);
 }

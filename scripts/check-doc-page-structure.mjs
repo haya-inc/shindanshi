@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 
 const root = process.cwd();
 const secondStageRoot = path.join(root, "content/docs/second-stage");
@@ -107,7 +108,7 @@ function resolveSecondStageFiles(matcher) {
     .map((fileName) => path.join(secondStageRoot, fileName));
 }
 
-function normalizeHeading(value) {
+export function normalizeHeading(value) {
   return value
     .replace(/`([^`]*)`/gu, "$1")
     .replace(/\[(.*?)\]\(.*?\)/gu, "$1")
@@ -115,7 +116,7 @@ function normalizeHeading(value) {
     .trim();
 }
 
-function extractLevel2Headings(content) {
+export function extractLevel2Headings(content) {
   const headings = [];
   let inCodeFence = false;
 
@@ -151,7 +152,7 @@ function matchesAnyHeading(headings, patterns) {
   return patterns.some((pattern) => headings.some((heading) => pattern.test(heading)));
 }
 
-function findMissingSections(headings, requiredSections) {
+export function findMissingSections(headings, requiredSections) {
   return requiredSections
     .filter((section) => !matchesAnyHeading(headings, section.patterns))
     .map((section) => section.label);
@@ -201,4 +202,6 @@ function main() {
   }
 }
 
-main();
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main();
+}

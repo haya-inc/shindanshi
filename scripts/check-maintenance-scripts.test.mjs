@@ -9,6 +9,11 @@ import {
   toDocUrlFromRelativePath,
 } from "./check-doc-links.mjs";
 import { detectActualGates, parseClaimedGates } from "./check-wiki-maintenance.mjs";
+import {
+  extractLevel2Headings,
+  findMissingSections,
+  normalizeHeading,
+} from "./check-doc-page-structure.mjs";
 
 const docsRoot = path.join(process.cwd(), "content", "docs");
 
@@ -55,6 +60,38 @@ $E=mc^2$
   assert.match(normalized, /href="\/reference\/study-time-model"/u);
   assert.match(normalized, /href='\/reference\/important-formulas#profit'/u);
   assert.doesNotMatch(normalized, /\$E=mc\^2\$/u);
+});
+
+test("check-doc-page-structure は見出しからインラインマークアップを除去する", () => {
+  assert.equal(normalizeHeading("`CVP分析`の基本"), "CVP分析の基本");
+  assert.equal(normalizeHeading("[参照ページ](/ref)"), "参照ページ");
+  assert.equal(normalizeHeading("<br/>見出し"), "見出し");
+});
+
+test("check-doc-page-structure はコードフェンス内の ## を無視する", () => {
+  const content = `
+## 本文の見出し
+
+\`\`\`markdown
+## コードブロック内の見出し
+\`\`\`
+
+## もう一つの見出し
+`;
+  const headings = extractLevel2Headings(content);
+
+  assert.deepEqual(headings, ["本文の見出し", "もう一つの見出し"]);
+});
+
+test("check-doc-page-structure は不足セクションを検出する", () => {
+  const headings = ["このページの役割", "学習のポイント"];
+  const required = [
+    { label: "このページの役割", patterns: [/^このページの役割$/u] },
+    { label: "典型的なつまずき", patterns: [/^典型的なつまずき$/u] },
+  ];
+  const missing = findMissingSections(headings, required);
+
+  assert.deepEqual(missing, ["典型的なつまずき"]);
 });
 
 test("check-wiki-maintenance は達成ゲートの短縮記法を展開する", () => {

@@ -196,6 +196,7 @@ export function detectActualGates(content, hasFreshnessEntry) {
     actual.add("G4");
   }
 
+  // G5（本文が存在する）は全ページで無条件に達成とみなす。
   actual.add("G5");
 
   if (hasFreshnessEntry && hasExternalLink && hasDateMarker) {
@@ -272,9 +273,20 @@ function validateFreshnessEntries(registry, today, timeZone) {
   return { errors, warnings, results };
 }
 
+function collectDocFiles() {
+  return walkFiles(path.join(root, "content/docs"))
+    .filter((filePath) => filePath.endsWith(".mdx"))
+    .map((filePath) => ({
+      absolutePath: filePath,
+      relativePath: toPosix(path.relative(root, filePath)),
+      content: fs.readFileSync(filePath, "utf8"),
+    }));
+}
+
 // 進捗トラッカーの申告が本文の実態とずれていないか確認する。
-function validateTrackedPages(trackedPages, freshnessEntries) {
+function validateTrackedPages(trackedPages, freshnessEntries, docFiles) {
   const errors = [];
+  const docByPath = new Map(docFiles.map((f) => [f.absolutePath, f]));
 
   for (const trackedPage of trackedPages) {
     const resolvedPath = routeToDocPath(trackedPage.route);
@@ -284,8 +296,9 @@ function validateTrackedPages(trackedPages, freshnessEntries) {
       continue;
     }
 
-    const relativeDocPath = toPosix(path.relative(root, resolvedPath));
-    const content = fs.readFileSync(resolvedPath, "utf8");
+    const doc = docByPath.get(resolvedPath);
+    const content = doc ? doc.content : fs.readFileSync(resolvedPath, "utf8");
+    const relativeDocPath = doc ? doc.relativePath : toPosix(path.relative(root, resolvedPath));
     const freshnessEntry = freshnessEntries.get(relativeDocPath);
     const actualGates = detectActualGates(content, Boolean(freshnessEntry));
     const claimedGates = parseClaimedGates(trackedPage.claimedGates);
@@ -304,21 +317,11 @@ function validateTrackedPages(trackedPages, freshnessEntries) {
   return errors;
 }
 
-function collectDocFiles() {
-  return walkFiles(path.join(root, "content/docs"))
-    .filter((filePath) => filePath.endsWith(".mdx"))
-    .map((filePath) => ({
-      absolutePath: filePath,
-      relativePath: toPosix(path.relative(root, filePath)),
-      content: fs.readFileSync(filePath, "utf8"),
-    }));
-}
-
 // 日付や最新確認メモを含むページが、鮮度台帳から漏れていないか確認する。
-function validateUpdateProneDocs(freshnessEntries) {
+function validateUpdateProneDocs(freshnessEntries, docFiles) {
   const errors = [];
 
-  for (const docFile of collectDocFiles()) {
+  for (const docFile of docFiles) {
     const looksUpdateProne =
       /最新確認メモ/u.test(docFile.content) ||
       /更新確認メモ/u.test(docFile.content) ||
@@ -346,8 +349,9 @@ export function main() {
     today,
     timeZone
   );
-  const trackedPageErrors = validateTrackedPages(extractTrackedPages(), freshnessEntries);
-  const updateProneErrors = validateUpdateProneDocs(freshnessEntries);
+  const docFiles = collectDocFiles();
+  const trackedPageErrors = validateTrackedPages(extractTrackedPages(), freshnessEntries, docFiles);
+  const updateProneErrors = validateUpdateProneDocs(freshnessEntries, docFiles);
   const errors = [
     ...freshnessValidation.errors,
     ...trackedPageErrors,
