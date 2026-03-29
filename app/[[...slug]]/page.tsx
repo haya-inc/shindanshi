@@ -70,15 +70,7 @@ async function renderCachedPage(slug: string[]) {
         return (
           <section className="wiki-home-graph-card">
             <div className="wiki-home-graph-copy">
-              <div className="space-y-1">
-                <p className="wiki-home-card-kicker">Knowledge Graph</p>
-                <h2 className="wiki-home-section-title">
-                  知識のつながりが一目でわかる全体図
-                </h2>
-                <p className="wiki-home-section-copy">
-                  ページ同士の参照関係を俯瞰しながら、今どこから読み始めるかを選べます。
-                </p>
-              </div>
+              <h2 className="wiki-home-graph-title">関連ページのつながり</h2>
               <div className="wiki-home-graph-meta">
                 <span className="wiki-home-graph-chip">
                   ページ {siteGraph.nodes.length} 件

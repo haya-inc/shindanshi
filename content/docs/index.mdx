@@ -11,10 +11,10 @@ import Link from 'next/link';
     <p className="wiki-home-eyebrow">Shindanshi Wiki</p>
     <h1 className="wiki-home-title">中小企業診断士 wiki</h1>
     <p className="wiki-home-lead">
-      {"制度確認から 1次・2次の学習までを、同じ導線の中で往復できるように整理した学習用 wiki です。更新論点は参照資料へ寄せ、本文は「次にどこへ進むか」がすぐ分かる形に絞っています。"}
+      {"中小企業診断士試験の学習に必要な知識を、科目ごとに整理した wiki です。"}
     </p>
     <div className="wiki-home-actions">
-      <Link className="wiki-home-primary" href="/reference/exam-guide">
+      <Link className="wiki-home-secondary" href="/reference/exam-guide">
         受験ガイドから入る
       </Link>
       <a className="wiki-home-secondary" href="#first-stage-subjects">
@@ -27,17 +27,18 @@ import Link from 'next/link';
   </div>
 
   <div className="wiki-home-panel">
-    <p className="wiki-home-panel-label">First 10 Minutes</p>
-    <ul className="wiki-home-steps wiki-home-steps--compact">
+    <p className="wiki-home-panel-label">はじめかた</p>
+    <ol className="wiki-home-steps wiki-home-steps--compact">
       <li>
-        制度差分は <Link href="/reference/exam-guide">受験ガイド</Link> で確認する
+        <Link href="/reference/exam-guide">受験ガイド</Link>で試験の全体像をつかむ
       </li>
       <li>
-        1次は 7 科目、2次は <Link href="/second-stage">第2次試験</Link> へ進む
+        科目ページで出題範囲を確認する
       </li>
-      <li>章ページから個別ノードへ降りる</li>
-    </ul>
-    <p className="wiki-home-panel-note">更新論点は参照資料、安定論点は本文へ寄せています。</p>
+      <li>
+        気になるトピックから読み始める
+      </li>
+    </ol>
   </div>
 
   <HomeKnowledgeGraph />
@@ -46,29 +47,28 @@ import Link from 'next/link';
 <section className="not-prose wiki-home-section">
   <div className="wiki-home-section-head">
     <p className="wiki-home-card-kicker">Navigator</p>
-    <h2 className="wiki-home-section-title">まず選ぶ導線</h2>
-    <p className="wiki-home-section-copy">最初の目的を決めると、制度確認、1次、2次のどこから入るかが迷いにくくなります。</p>
+    <h2 className="wiki-home-section-title">どこから読む？</h2>
   </div>
 
   <div className="wiki-home-grid">
     <Link className="wiki-home-card" href="/reference/exam-guide">
       <p className="wiki-home-card-kicker">Latest</p>
       <h3 className="wiki-home-card-title">受験ガイド</h3>
-      <p className="wiki-home-card-copy">試験制度、日程、申込、手数料など、毎年確認が必要な情報を一次情報とあわせて確認します。</p>
+      <p className="wiki-home-card-copy">試験日程・申込方法・手数料など、最新情報をまとめています。</p>
       <span className="wiki-home-card-link">制度確認へ進む</span>
     </Link>
 
     <a className="wiki-home-card" href="#first-stage-subjects">
       <p className="wiki-home-card-kicker">First Stage</p>
       <h3 className="wiki-home-card-title">1次の7科目</h3>
-      <p className="wiki-home-card-copy">科目トップから章ハブへ降りて、ページ、出題ノード、演習ノードへ広げます。</p>
+      <p className="wiki-home-card-copy">経済学から中小企業政策まで、7科目の知識を整理しています。</p>
       <span className="wiki-home-card-link">科目一覧を見る</span>
     </a>
 
     <Link className="wiki-home-card" href="/second-stage">
       <p className="wiki-home-card-kicker">Second Stage</p>
       <h3 className="wiki-home-card-title">第2次試験</h3>
-      <p className="wiki-home-card-copy">4事例の違いと共通プロセスを同じ導線で確認し、設問と答案骨子へ戻れます。</p>
+      <p className="wiki-home-card-copy">事例 I〜IV の解法の型をまとめています。</p>
       <span className="wiki-home-card-link">事例別の入口へ進む</span>
     </Link>
   </div>
@@ -78,7 +78,6 @@ import Link from 'next/link';
   <div className="wiki-home-section-head">
     <p className="wiki-home-card-kicker">First Stage</p>
     <h2 className="wiki-home-section-title">1次の7科目</h2>
-    <p className="wiki-home-section-copy">どの科目も、まず全体像を掴んでから個別論点へ降りる構成にそろえています。</p>
   </div>
 
   <div className="wiki-home-grid">
@@ -131,59 +130,20 @@ import Link from 'next/link';
   <div className="wiki-home-section-head">
     <p className="wiki-home-card-kicker">Value</p>
     <h2 className="wiki-home-section-title">この wiki でできること</h2>
-    <p className="wiki-home-section-copy">制度確認、1次学習、2次学習を分断せず、同じ場所で戻り先まで持てるようにしています。</p>
   </div>
 
   <div className="wiki-home-principles">
     <div className="wiki-home-principle">
       <h3>制度確認</h3>
-      <p className="wiki-home-principle-copy">更新される情報は本文に固定せず、参照資料と公式案内へ辿れる導線を先に置きます。</p>
+      <p className="wiki-home-principle-copy">最新の試験日程・申込方法・手数料をまとめて確認できます。</p>
     </div>
     <div className="wiki-home-principle">
       <h3>1次学習</h3>
-      <p className="wiki-home-principle-copy">科目トップで全体像を押さえてから、章ハブ、ページ、演習ノードへ降りられます。</p>
+      <p className="wiki-home-principle-copy">7科目の知識をトピック単位で学べます。</p>
     </div>
     <div className="wiki-home-principle">
       <h3>2次学習</h3>
-      <p className="wiki-home-principle-copy">共通プロセスを固めてから事例別ページへ進み、与件根拠と答案構成を往復できます。</p>
-    </div>
-  </div>
-</section>
-
-<section className="not-prose wiki-home-section">
-  <div className="wiki-home-section-head">
-    <p className="wiki-home-card-kicker">Flow</p>
-    <h2 className="wiki-home-section-title">読み進め方</h2>
-    <p className="wiki-home-section-copy">迷ったときは、更新論点を先に切り分けてから、章ハブと個別ノードへ降りる順で進みます。</p>
-  </div>
-
-  <div className="wiki-home-roadmap">
-    <div className="wiki-home-roadmap-card">
-      <h3>1. 更新論点を先に閉じる</h3>
-      <ul>
-        <li>
-          制度差分は <Link href="/reference/exam-guide">受験ガイド</Link> と一次情報で確認する
-        </li>
-        <li>
-          年度差や横断索引は <Link href="/reference">参照資料</Link> に寄せて確認する
-        </li>
-      </ul>
-    </div>
-
-    <div className="wiki-home-roadmap-card">
-      <h3>2. 章ハブで全体像を掴む</h3>
-      <ul>
-        <li>科目トップや事例トップで、何が問われるかと優先順位を先に見る</li>
-        <li>章ページで論点のまとまりと戻り先を確認する</li>
-      </ul>
-    </div>
-
-    <div className="wiki-home-roadmap-card">
-      <h3>3. 個別ノードへ降りて広げる</h3>
-      <ul>
-        <li>ページ、出題ノード、演習ノードで必要な粒度まで深掘りする</li>
-        <li>関連ページと graph を使って次に読むページへ移る</li>
-      </ul>
+      <p className="wiki-home-principle-copy">事例ごとの解法の型を確認できます。</p>
     </div>
   </div>
 </section>

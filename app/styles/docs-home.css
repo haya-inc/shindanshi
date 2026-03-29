@@ -62,7 +62,7 @@
 .wiki-home-eyebrow,
 .wiki-home-card-kicker,
 .wiki-home-panel-label {
-  margin: 0;
+  margin: 0 0 -0.5rem;
   color: var(--accent-strong);
   font-size: 0.74rem;
   font-weight: 700;
@@ -184,7 +184,11 @@
 
 .wiki-home-section-head {
   display: grid;
-  gap: 0.35rem;
+  gap: 0.15rem;
+}
+
+.wiki-home-section-head .wiki-home-card-kicker {
+  margin-bottom: -0.15rem;
 }
 
 .wiki-home-section-title {
@@ -192,6 +196,18 @@
   color: var(--foreground);
   font-family: var(--font-display), serif;
   font-size: clamp(1.38rem, 1.22rem + 0.52vw, 1.78rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+#nd-page .prose .wiki-home-graph-title {
+  margin: 0;
+  padding-top: 0;
+  border-top: 0;
+  color: var(--foreground);
+  font-family: var(--font-display), serif;
+  font-size: clamp(1.38rem, 1.22rem + 0.52vw, 1.78rem);
+  font-weight: 400;
   line-height: 1.08;
   letter-spacing: -0.04em;
 }
@@ -231,9 +247,9 @@
 .wiki-home-roadmap-card {
   display: flex;
   flex-direction: column;
-  gap: 0.85rem;
+  gap: 0.55rem;
   border-radius: 1.4rem;
-  padding: 1.15rem;
+  padding: 1rem;
   text-decoration: none;
   transition:
     transform 180ms ease,
