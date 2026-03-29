@@ -141,26 +141,6 @@ function ClientGraph({
     setPalette(readGraphPalette(containerRef.current));
   }, [containerRef]);
 
-  function fitGraphToViewport(durationMs = 0) {
-    const graphInstance = graphRef.current;
-
-    if (!graphInstance) {
-      return;
-    }
-
-    const bbox = graphInstance.getGraphBbox();
-
-    if (!bbox) {
-      return;
-    }
-
-    const centerX = (bbox.x[0] + bbox.x[1]) / 2;
-    const centerY = (bbox.y[0] + bbox.y[1]) / 2;
-
-    graphInstance.centerAt(centerX, centerY, durationMs);
-    graphInstance.zoomToFit(durationMs, 40);
-  }
-
   useEffect(() => {
     const container = containerRef.current;
 
@@ -181,7 +161,17 @@ function ClientGraph({
 
       window.clearTimeout(timer);
       timer = window.setTimeout(() => {
-        fitGraphToViewport(0);
+        const g = graphRef.current;
+        if (g) {
+          const bbox = g.getGraphBbox();
+          if (bbox) {
+            g.centerAt(
+              (bbox.x[0] + bbox.x[1]) / 2,
+              (bbox.y[0] + bbox.y[1]) / 2,
+              0,
+            );
+          }
+        }
       }, 120);
     });
 
@@ -307,7 +297,19 @@ function ClientGraph({
           linkWidth={1.5}
           warmupTicks={40}
           cooldownTicks={90}
-          onEngineStop={() => fitGraphToViewport(0)}
+          onEngineStop={() => {
+            const g = graphRef.current;
+            if (g) {
+              const bbox = g.getGraphBbox();
+              if (bbox) {
+                g.centerAt(
+                  (bbox.x[0] + bbox.x[1]) / 2,
+                  (bbox.y[0] + bbox.y[1]) / 2,
+                  0,
+                );
+              }
+            }
+          }}
           onNodeHover={handleNodeHover}
           onNodeClick={(node) => router.push(node.url)}
           enableNodeDrag

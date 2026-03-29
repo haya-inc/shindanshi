@@ -47,7 +47,7 @@
 
 @media (min-width: 1024px) {
   .wiki-home-hero {
-    grid-template-columns: minmax(0, 1.8fr) minmax(18rem, 0.8fr);
+    grid-template-columns: minmax(0, 1.8fr) minmax(20rem, 0.8fr);
     align-items: start;
   }
 }
@@ -233,7 +233,7 @@
 
 @media (min-width: 1024px) {
   .wiki-home-panel {
-    max-width: 18rem;
+    max-width: 20rem;
     justify-self: end;
   }
 

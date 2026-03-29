@@ -1113,6 +1113,48 @@
       "reviewWindowDays": 365,
       "lastReviewedAt": "2026-03-29",
       "sourceUrls": ["https://www.jf-cmca.jp/contents/010_c_/shikenmondai.html"]
+    },
+    {
+      "route": "/finance-and-accounting/exam-study-guide",
+      "docPath": "content/docs/finance-and-accounting/exam-study-guide.mdx",
+      "reviewWindowDays": 365,
+      "lastReviewedAt": "2026-03-29",
+      "sourceUrls": ["https://www.jf-cmca.jp/contents/010_c_/shikenmondai.html"]
+    },
+    {
+      "route": "/business-management-theory/exam-study-guide",
+      "docPath": "content/docs/business-management-theory/exam-study-guide.mdx",
+      "reviewWindowDays": 365,
+      "lastReviewedAt": "2026-03-29",
+      "sourceUrls": ["https://www.jf-cmca.jp/contents/010_c_/shikenmondai.html"]
+    },
+    {
+      "route": "/operations-management/exam-study-guide",
+      "docPath": "content/docs/operations-management/exam-study-guide.mdx",
+      "reviewWindowDays": 365,
+      "lastReviewedAt": "2026-03-29",
+      "sourceUrls": ["https://www.jf-cmca.jp/contents/010_c_/shikenmondai.html"]
+    },
+    {
+      "route": "/business-law/exam-study-guide",
+      "docPath": "content/docs/business-law/exam-study-guide.mdx",
+      "reviewWindowDays": 365,
+      "lastReviewedAt": "2026-03-29",
+      "sourceUrls": ["https://www.jf-cmca.jp/contents/010_c_/shikenmondai.html"]
+    },
+    {
+      "route": "/management-information-systems/exam-study-guide",
+      "docPath": "content/docs/management-information-systems/exam-study-guide.mdx",
+      "reviewWindowDays": 365,
+      "lastReviewedAt": "2026-03-29",
+      "sourceUrls": ["https://www.jf-cmca.jp/contents/010_c_/shikenmondai.html"]
+    },
+    {
+      "route": "/sme-management-and-policy/exam-study-guide",
+      "docPath": "content/docs/sme-management-and-policy/exam-study-guide.mdx",
+      "reviewWindowDays": 365,
+      "lastReviewedAt": "2026-03-29",
+      "sourceUrls": ["https://www.jf-cmca.jp/contents/010_c_/shikenmondai.html"]
     }
   ]
 }
