@@ -1,0 +1,1867 @@
+{
+  "title": "中小企業診断士 wiki",
+  "genre": "中小企業診断士試験（経済学・経済政策、財務・会計、企業経営理論、運営管理、経営法務、経営情報システム、中小企業経営・中小企業政策など）の資格取得に向けた学習用テキスト・参考書・過去問解説",
+  "format": "markdown",
+  "chapters": [
+    {
+      "file": "docs/economics-and-economic-policy/microeconomics.mdx",
+      "chapter": "ミクロ経済学",
+      "volume": "経済学・経済政策",
+      "order": 1
+    },
+    {
+      "file": "docs/economics-and-economic-policy/microeconomics-knowledge-market-mechanism.mdx",
+      "chapter": "需要と供給、市場均衡",
+      "volume": "経済学・経済政策",
+      "order": 2
+    },
+    {
+      "file": "docs/economics-and-economic-policy/microeconomics-knowledge-consumer-and-firm.mdx",
+      "chapter": "消費者行動と企業行動",
+      "volume": "経済学・経済政策",
+      "order": 3
+    },
+    {
+      "file": "docs/economics-and-economic-policy/microeconomics-knowledge-market-structure-and-failure.mdx",
+      "chapter": "市場構造と市場の失敗",
+      "volume": "経済学・経済政策",
+      "order": 4
+    },
+    {
+      "file": "docs/economics-and-economic-policy/microeconomics-knowledge-game-theory.mdx",
+      "chapter": "ゲーム理論",
+      "volume": "経済学・経済政策",
+      "order": 5
+    },
+    {
+      "file": "docs/economics-and-economic-policy/microeconomics-knowledge-international-trade.mdx",
+      "chapter": "国際貿易理論",
+      "volume": "経済学・経済政策",
+      "order": 6
+    },
+    {
+      "file": "docs/economics-and-economic-policy/microeconomics-exam-graph-and-comparison-patterns.mdx",
+      "chapter": "グラフ・比較問題の解き方",
+      "volume": "経済学・経済政策",
+      "order": 7
+    },
+    {
+      "file": "docs/economics-and-economic-policy/microeconomics-practice-basic-check.mdx",
+      "chapter": "基本確認問題",
+      "volume": "経済学・経済政策",
+      "order": 8
+    },
+    {
+      "file": "docs/economics-and-economic-policy/microeconomics-summary.mdx",
+      "chapter": "要点整理",
+      "volume": "経済学・経済政策",
+      "order": 9
+    },
+    {
+      "file": "docs/economics-and-economic-policy/macroeconomics.mdx",
+      "chapter": "マクロ経済学",
+      "volume": "経済学・経済政策",
+      "order": 10
+    },
+    {
+      "file": "docs/economics-and-economic-policy/macroeconomics-knowledge-national-income-and-indicators.mdx",
+      "chapter": "国民所得計算と主要指標",
+      "volume": "経済学・経済政策",
+      "order": 11
+    },
+    {
+      "file": "docs/economics-and-economic-policy/macroeconomics-knowledge-consumption-and-investment-theory.mdx",
+      "chapter": "消費理論と投資理論",
+      "volume": "経済学・経済政策",
+      "order": 12
+    },
+    {
+      "file": "docs/economics-and-economic-policy/macroeconomics-knowledge-is-lm-and-policies.mdx",
+      "chapter": "IS-LM と政策効果",
+      "volume": "経済学・経済政策",
+      "order": 13
+    },
+    {
+      "file": "docs/economics-and-economic-policy/macroeconomics-knowledge-ad-as-and-international-macro.mdx",
+      "chapter": "AD-AS、フィリップス曲線、国際マクロ",
+      "volume": "経済学・経済政策",
+      "order": 14
+    },
+    {
+      "file": "docs/economics-and-economic-policy/macroeconomics-knowledge-history-of-macroeconomic-thought.mdx",
+      "chapter": "主要経済理論の系譜",
+      "volume": "経済学・経済政策",
+      "order": 15
+    },
+    {
+      "file": "docs/economics-and-economic-policy/macroeconomics-exam-policy-and-graph-patterns.mdx",
+      "chapter": "政策・グラフ問題の解き方",
+      "volume": "経済学・経済政策",
+      "order": 16
+    },
+    {
+      "file": "docs/economics-and-economic-policy/macroeconomics-practice-basic-check.mdx",
+      "chapter": "基本確認問題",
+      "volume": "経済学・経済政策",
+      "order": 17
+    },
+    {
+      "file": "docs/economics-and-economic-policy/macroeconomics-summary.mdx",
+      "chapter": "要点整理",
+      "volume": "経済学・経済政策",
+      "order": 18
+    },
+    {
+      "file": "docs/finance-and-accounting/bookkeeping-basics.mdx",
+      "chapter": "簿記の基礎",
+      "volume": "財務・会計",
+      "order": 19
+    },
+    {
+      "file": "docs/finance-and-accounting/bookkeeping-basics-account-categories-and-journal-entries.mdx",
+      "chapter": "簿記の基礎：5分類から仕訳まで",
+      "volume": "財務・会計",
+      "order": 20
+    },
+    {
+      "file": "docs/finance-and-accounting/bookkeeping-basics-adjusting-entries.mdx",
+      "chapter": "決算整理仕訳",
+      "volume": "財務・会計",
+      "order": 21
+    },
+    {
+      "file": "docs/finance-and-accounting/bookkeeping-basics-ledgers-and-vouchers.mdx",
+      "chapter": "帳簿組織と伝票",
+      "volume": "財務・会計",
+      "order": 22
+    },
+    {
+      "file": "docs/finance-and-accounting/corporate-accounting-basics.mdx",
+      "chapter": "企業会計の基礎",
+      "volume": "財務・会計",
+      "order": 23
+    },
+    {
+      "file": "docs/finance-and-accounting/corporate-accounting-financial-statements-and-five-profits.mdx",
+      "chapter": "財務諸表と5段階利益",
+      "volume": "財務・会計",
+      "order": 24
+    },
+    {
+      "file": "docs/finance-and-accounting/corporate-accounting-assets-accounting.mdx",
+      "chapter": "資産会計",
+      "volume": "財務・会計",
+      "order": 25
+    },
+    {
+      "file": "docs/finance-and-accounting/corporate-accounting-liabilities-equity-and-tax-effect.mdx",
+      "chapter": "負債・純資産会計と税効果会計",
+      "volume": "財務・会計",
+      "order": 26
+    },
+    {
+      "file": "docs/finance-and-accounting/corporate-accounting-principles-and-consolidation.mdx",
+      "chapter": "企業会計原則と連結会計",
+      "volume": "財務・会計",
+      "order": 27
+    },
+    {
+      "file": "docs/finance-and-accounting/corporate-accounting-revenue-recognition.mdx",
+      "chapter": "収益認識基準",
+      "volume": "財務・会計",
+      "order": 28
+    },
+    {
+      "file": "docs/finance-and-accounting/cost-accounting.mdx",
+      "chapter": "原価計算",
+      "volume": "財務・会計",
+      "order": 29
+    },
+    {
+      "file": "docs/finance-and-accounting/cost-accounting-purpose-and-classification.mdx",
+      "chapter": "原価計算の目的と分類",
+      "volume": "財務・会計",
+      "order": 30
+    },
+    {
+      "file": "docs/finance-and-accounting/cost-accounting-job-order-and-process-costing.mdx",
+      "chapter": "個別原価計算と総合原価計算",
+      "volume": "財務・会計",
+      "order": 31
+    },
+    {
+      "file": "docs/finance-and-accounting/cost-accounting-standard-costing-and-variance-analysis.mdx",
+      "chapter": "標準原価計算と差異分析",
+      "volume": "財務・会計",
+      "order": 32
+    },
+    {
+      "file": "docs/finance-and-accounting/cost-accounting-direct-and-absorption-costing.mdx",
+      "chapter": "直接原価計算と全部原価計算",
+      "volume": "財務・会計",
+      "order": 33
+    },
+    {
+      "file": "docs/finance-and-accounting/cost-accounting-exam-patterns.mdx",
+      "chapter": "原価計算の解き方",
+      "volume": "財務・会計",
+      "order": 34
+    },
+    {
+      "file": "docs/finance-and-accounting/cost-accounting-practice-basic-check.mdx",
+      "chapter": "原価計算 基本確認問題",
+      "volume": "財務・会計",
+      "order": 35
+    },
+    {
+      "file": "docs/finance-and-accounting/cost-accounting-summary.mdx",
+      "chapter": "原価計算 要点整理",
+      "volume": "財務・会計",
+      "order": 36
+    },
+    {
+      "file": "docs/finance-and-accounting/management-analysis.mdx",
+      "chapter": "経営分析",
+      "volume": "財務・会計",
+      "order": 37
+    },
+    {
+      "file": "docs/finance-and-accounting/management-analysis-profitability.mdx",
+      "chapter": "収益性分析",
+      "volume": "財務・会計",
+      "order": 38
+    },
+    {
+      "file": "docs/finance-and-accounting/management-analysis-safety.mdx",
+      "chapter": "安全性分析",
+      "volume": "財務・会計",
+      "order": 39
+    },
+    {
+      "file": "docs/finance-and-accounting/management-analysis-efficiency.mdx",
+      "chapter": "効率性分析",
+      "volume": "財務・会計",
+      "order": 40
+    },
+    {
+      "file": "docs/finance-and-accounting/management-analysis-growth-and-productivity.mdx",
+      "chapter": "成長性分析と生産性分析",
+      "volume": "財務・会計",
+      "order": 41
+    },
+    {
+      "file": "docs/finance-and-accounting/management-analysis-cvp-and-break-even.mdx",
+      "chapter": "損益分岐点分析",
+      "volume": "財務・会計",
+      "order": 42
+    },
+    {
+      "file": "docs/finance-and-accounting/management-analysis-practice-basic-check.mdx",
+      "chapter": "経営分析 基本確認問題",
+      "volume": "財務・会計",
+      "order": 43
+    },
+    {
+      "file": "docs/finance-and-accounting/profit-and-cash-management.mdx",
+      "chapter": "利益と資金の管理",
+      "volume": "財務・会計",
+      "order": 44
+    },
+    {
+      "file": "docs/finance-and-accounting/profit-and-cash-management-profit-planning-and-budget-control.mdx",
+      "chapter": "利益計画と予算管理",
+      "volume": "財務・会計",
+      "order": 45
+    },
+    {
+      "file": "docs/finance-and-accounting/profit-and-cash-management-cash-flow-and-fcf.mdx",
+      "chapter": "キャッシュ・フロー管理",
+      "volume": "財務・会計",
+      "order": 46
+    },
+    {
+      "file": "docs/finance-and-accounting/profit-and-cash-management-practice-basic-check.mdx",
+      "chapter": "利益と資金の管理 基本確認問題",
+      "volume": "財務・会計",
+      "order": 47
+    },
+    {
+      "file": "docs/finance-and-accounting/finance.mdx",
+      "chapter": "ファイナンス",
+      "volume": "財務・会計",
+      "order": 48
+    },
+    {
+      "file": "docs/finance-and-accounting/finance-profitability-index.mdx",
+      "chapter": "収益性指数法",
+      "volume": "財務・会計",
+      "order": 49
+    },
+    {
+      "file": "docs/finance-and-accounting/finance-efficient-market-hypothesis.mdx",
+      "chapter": "効率的市場仮説",
+      "volume": "財務・会計",
+      "order": 50
+    },
+    {
+      "file": "docs/finance-and-accounting/finance-multiples-valuation.mdx",
+      "chapter": "マルチプル法と企業価値評価",
+      "volume": "財務・会計",
+      "order": 51
+    },
+    {
+      "file": "docs/finance-and-accounting/finance-mm-and-dividend-policy.mdx",
+      "chapter": "MM理論と配当政策",
+      "volume": "財務・会計",
+      "order": 52
+    },
+    {
+      "file": "docs/finance-and-accounting/finance-derivatives-risk-management.mdx",
+      "chapter": "デリバティブとリスク管理",
+      "volume": "財務・会計",
+      "order": 53
+    },
+    {
+      "file": "docs/finance-and-accounting/finance-practice-basic-check.mdx",
+      "chapter": "ファイナンス 基本確認問題",
+      "volume": "財務・会計",
+      "order": 54
+    },
+    {
+      "file": "docs/business-management-theory/management-strategy.mdx",
+      "chapter": "経営戦略論",
+      "volume": "企業経営理論",
+      "order": 55
+    },
+    {
+      "file": "docs/business-management-theory/knowledge-strategic-planning-and-swot.mdx",
+      "chapter": "経営計画とSWOT",
+      "volume": "企業経営理論",
+      "order": 56
+    },
+    {
+      "file": "docs/business-management-theory/knowledge-corporate-and-growth-strategy.mdx",
+      "chapter": "全社戦略と成長戦略",
+      "volume": "企業経営理論",
+      "order": 57
+    },
+    {
+      "file": "docs/business-management-theory/knowledge-competitive-and-resource-strategy.mdx",
+      "chapter": "競争戦略と経営資源戦略",
+      "volume": "企業経営理論",
+      "order": 58
+    },
+    {
+      "file": "docs/business-management-theory/knowledge-innovation-international-and-digital-strategy.mdx",
+      "chapter": "イノベーション・国際経営・デジタル戦略",
+      "volume": "企業経営理論",
+      "order": 59
+    },
+    {
+      "file": "docs/business-management-theory/knowledge-csr-esg-and-governance.mdx",
+      "chapter": "CSR・ESGとコーポレートガバナンス",
+      "volume": "企業経営理論",
+      "order": 60
+    },
+    {
+      "file": "docs/business-management-theory/organization-theory.mdx",
+      "chapter": "組織論",
+      "volume": "企業経営理論",
+      "order": 61
+    },
+    {
+      "file": "docs/business-management-theory/knowledge-barnard-and-simon.mdx",
+      "chapter": "バーナードとサイモン",
+      "volume": "企業経営理論",
+      "order": 62
+    },
+    {
+      "file": "docs/business-management-theory/knowledge-organizational-structure-and-design.mdx",
+      "chapter": "組織構造と組織設計",
+      "volume": "企業経営理論",
+      "order": 63
+    },
+    {
+      "file": "docs/business-management-theory/knowledge-motivation-theories.mdx",
+      "chapter": "知識・欲求と動機付け理論",
+      "volume": "企業経営理論",
+      "order": 64
+    },
+    {
+      "file": "docs/business-management-theory/knowledge-leadership-theories.mdx",
+      "chapter": "リーダーシップ論",
+      "volume": "企業経営理論",
+      "order": 65
+    },
+    {
+      "file": "docs/business-management-theory/knowledge-human-resource-management.mdx",
+      "chapter": "人的資源管理",
+      "volume": "企業経営理論",
+      "order": 66
+    },
+    {
+      "file": "docs/business-management-theory/knowledge-organizational-culture-and-change.mdx",
+      "chapter": "組織文化と組織変革",
+      "volume": "企業経営理論",
+      "order": 67
+    },
+    {
+      "file": "docs/business-management-theory/marketing.mdx",
+      "chapter": "マーケティング論",
+      "volume": "企業経営理論",
+      "order": 68
+    },
+    {
+      "file": "docs/business-management-theory/knowledge-stp-and-4p.mdx",
+      "chapter": "STPとマーケティングミックス（4P）",
+      "volume": "企業経営理論",
+      "order": 69
+    },
+    {
+      "file": "docs/business-management-theory/knowledge-marketing-research-and-consumer-behavior.mdx",
+      "chapter": "マーケティングリサーチと消費者行動論",
+      "volume": "企業経営理論",
+      "order": 70
+    },
+    {
+      "file": "docs/business-management-theory/knowledge-product-and-price-strategy.mdx",
+      "chapter": "製品戦略と価格戦略",
+      "volume": "企業経営理論",
+      "order": 71
+    },
+    {
+      "file": "docs/business-management-theory/knowledge-channel-and-promotion-strategy.mdx",
+      "chapter": "チャネル戦略とプロモーション戦略",
+      "volume": "企業経営理論",
+      "order": 72
+    },
+    {
+      "file": "docs/business-management-theory/knowledge-service-marketing-and-crm.mdx",
+      "chapter": "サービスマーケティングとCRM",
+      "volume": "企業経営理論",
+      "order": 73
+    },
+    {
+      "file": "docs/operations-management/production-planning.mdx",
+      "chapter": "生産管理 プランニング",
+      "volume": "運営管理",
+      "order": 74
+    },
+    {
+      "file": "docs/operations-management/knowledge-production-systems-and-planning-control.mdx",
+      "chapter": "生産形態と生産計画・生産統制",
+      "volume": "運営管理",
+      "order": 75
+    },
+    {
+      "file": "docs/operations-management/knowledge-factory-layout-and-flow-design.mdx",
+      "chapter": "工場レイアウトと流れ設計",
+      "volume": "運営管理",
+      "order": 76
+    },
+    {
+      "file": "docs/operations-management/knowledge-materials-and-inventory-management.mdx",
+      "chapter": "資材・在庫管理",
+      "volume": "運営管理",
+      "order": 77
+    },
+    {
+      "file": "docs/operations-management/knowledge-quality-management.mdx",
+      "chapter": "品質管理のオペレーション",
+      "volume": "運営管理",
+      "order": 78
+    },
+    {
+      "file": "docs/operations-management/knowledge-ie-and-ve.mdx",
+      "chapter": "IEとVE",
+      "volume": "運営管理",
+      "order": 79
+    },
+    {
+      "file": "docs/operations-management/production-operations.mdx",
+      "chapter": "生産管理 オペレーション",
+      "volume": "運営管理",
+      "order": 80
+    },
+    {
+      "file": "docs/operations-management/knowledge-jit-and-kanban.mdx",
+      "chapter": "JITとかんばん方式",
+      "volume": "運営管理",
+      "order": 81
+    },
+    {
+      "file": "docs/operations-management/knowledge-scheduling-and-line-balancing.mdx",
+      "chapter": "スケジューリングとラインバランシング",
+      "volume": "運営管理",
+      "order": 82
+    },
+    {
+      "file": "docs/operations-management/knowledge-equipment-management-and-productivity.mdx",
+      "chapter": "設備管理と生産性向上",
+      "volume": "運営管理",
+      "order": 83
+    },
+    {
+      "file": "docs/operations-management/knowledge-purchasing-and-outsourcing-management.mdx",
+      "chapter": "購買・外注管理",
+      "volume": "運営管理",
+      "order": 84
+    },
+    {
+      "file": "docs/operations-management/store-and-sales-management.mdx",
+      "chapter": "店舗・販売管理",
+      "volume": "運営管理",
+      "order": 85
+    },
+    {
+      "file": "docs/operations-management/knowledge-store-location-and-trading-area.mdx",
+      "chapter": "店舗立地と商圏分析",
+      "volume": "運営管理",
+      "order": 86
+    },
+    {
+      "file": "docs/operations-management/knowledge-store-layout-and-merchandising.mdx",
+      "chapter": "店舗レイアウトとマーチャンダイジング──陳列の科学",
+      "volume": "運営管理",
+      "order": 87
+    },
+    {
+      "file": "docs/operations-management/knowledge-sales-indicators-logistics-and-retail-information-systems.mdx",
+      "chapter": "販売管理指標・物流・流通情報システム",
+      "volume": "運営管理",
+      "order": 88
+    },
+    {
+      "file": "docs/business-law/company-law.mdx",
+      "chapter": "会社法",
+      "volume": "経営法務",
+      "order": 89
+    },
+    {
+      "file": "docs/business-law/knowledge-company-types-and-incorporation.mdx",
+      "chapter": "会社類型と設立手続",
+      "volume": "経営法務",
+      "order": 90
+    },
+    {
+      "file": "docs/business-law/knowledge-shares-and-shareholders.mdx",
+      "chapter": "株式と株主",
+      "volume": "経営法務",
+      "order": 91
+    },
+    {
+      "file": "docs/business-law/knowledge-corporate-organs-and-shareholder-meetings.mdx",
+      "chapter": "機関設計と株主総会決議",
+      "volume": "経営法務",
+      "order": 92
+    },
+    {
+      "file": "docs/business-law/knowledge-fundraising-dividends-and-financial-statements.mdx",
+      "chapter": "資金調達・配当・計算書類",
+      "volume": "経営法務",
+      "order": 93
+    },
+    {
+      "file": "docs/business-law/knowledge-corporate-reorganization-and-business-transfer.mdx",
+      "chapter": "組織再編と事業譲渡",
+      "volume": "経営法務",
+      "order": 94
+    },
+    {
+      "file": "docs/business-law/knowledge-insolvency-and-corporate-rehabilitation.mdx",
+      "chapter": "倒産法制",
+      "volume": "経営法務",
+      "order": 95
+    },
+    {
+      "file": "docs/business-law/intellectual-property.mdx",
+      "chapter": "知的財産権",
+      "volume": "経営法務",
+      "order": 96
+    },
+    {
+      "file": "docs/business-law/knowledge-ip-framework-and-terms.mdx",
+      "chapter": "知的財産権の体系と存続期間",
+      "volume": "経営法務",
+      "order": 97
+    },
+    {
+      "file": "docs/business-law/knowledge-patent-law.mdx",
+      "chapter": "特許法",
+      "volume": "経営法務",
+      "order": 98
+    },
+    {
+      "file": "docs/business-law/knowledge-utility-model-law.mdx",
+      "chapter": "実用新案法",
+      "volume": "経営法務",
+      "order": 99
+    },
+    {
+      "file": "docs/business-law/knowledge-design-law.mdx",
+      "chapter": "意匠法",
+      "volume": "経営法務",
+      "order": 100
+    },
+    {
+      "file": "docs/business-law/knowledge-trademark-law.mdx",
+      "chapter": "商標法",
+      "volume": "経営法務",
+      "order": 101
+    },
+    {
+      "file": "docs/business-law/knowledge-copyright-law.mdx",
+      "chapter": "著作権法",
+      "volume": "経営法務",
+      "order": 102
+    },
+    {
+      "file": "docs/business-law/knowledge-unfair-competition-prevention-law.mdx",
+      "chapter": "不正競争防止法",
+      "volume": "経営法務",
+      "order": 103
+    },
+    {
+      "file": "docs/business-law/knowledge-ip-strategy-and-international-protection.mdx",
+      "chapter": "知的財産権の国際的保護と戦略",
+      "volume": "経営法務",
+      "order": 104
+    },
+    {
+      "file": "docs/business-law/civil-and-transaction-law.mdx",
+      "chapter": "民法と取引関連法",
+      "volume": "経営法務",
+      "order": 105
+    },
+    {
+      "file": "docs/business-law/knowledge-contracts-obligations-and-security.mdx",
+      "chapter": "契約・債権・物権・担保",
+      "volume": "経営法務",
+      "order": 106
+    },
+    {
+      "file": "docs/business-law/knowledge-prescription-and-guarantee.mdx",
+      "chapter": "時効と保証",
+      "volume": "経営法務",
+      "order": 107
+    },
+    {
+      "file": "docs/business-law/knowledge-inheritance.mdx",
+      "chapter": "相続",
+      "volume": "経営法務",
+      "order": 108
+    },
+    {
+      "file": "docs/business-law/knowledge-antimonopoly-and-trade-regulation.mdx",
+      "chapter": "独占禁止法と取引適正化",
+      "volume": "経営法務",
+      "order": 109
+    },
+    {
+      "file": "docs/business-law/knowledge-consumer-protection-laws.mdx",
+      "chapter": "消費者保護関連法",
+      "volume": "経営法務",
+      "order": 110
+    },
+    {
+      "file": "docs/business-law/knowledge-personal-information-protection.mdx",
+      "chapter": "個人情報保護法",
+      "volume": "経営法務",
+      "order": 111
+    },
+    {
+      "file": "docs/business-law/knowledge-labor-laws-overview.mdx",
+      "chapter": "労働関連法規の概要",
+      "volume": "経営法務",
+      "order": 112
+    },
+    {
+      "file": "docs/business-law/knowledge-capital-market-laws.mdx",
+      "chapter": "資本市場関連法規",
+      "volume": "経営法務",
+      "order": 113
+    },
+    {
+      "file": "docs/business-law/knowledge-english-contract-terms.mdx",
+      "chapter": "英文契約書の基本用語",
+      "volume": "経営法務",
+      "order": 114
+    },
+    {
+      "file": "docs/management-information-systems/ict-basics.mdx",
+      "chapter": "情報通信技術の基礎",
+      "volume": "経営情報システム",
+      "order": 115
+    },
+    {
+      "file": "docs/management-information-systems/knowledge-computer-basics.mdx",
+      "chapter": "コンピュータの基礎",
+      "volume": "経営情報システム",
+      "order": 116
+    },
+    {
+      "file": "docs/management-information-systems/knowledge-database-and-sql.mdx",
+      "chapter": "データベースとSQL",
+      "volume": "経営情報システム",
+      "order": 117
+    },
+    {
+      "file": "docs/management-information-systems/knowledge-network-basics.mdx",
+      "chapter": "通信ネットワークの基礎",
+      "volume": "経営情報システム",
+      "order": 118
+    },
+    {
+      "file": "docs/management-information-systems/knowledge-web-and-cloud.mdx",
+      "chapter": "Webテクノロジーとクラウド",
+      "volume": "経営情報システム",
+      "order": 119
+    },
+    {
+      "file": "docs/management-information-systems/knowledge-information-security-basics.mdx",
+      "chapter": "情報セキュリティの基礎",
+      "volume": "経営情報システム",
+      "order": 120
+    },
+    {
+      "file": "docs/management-information-systems/knowledge-ai-and-machine-learning-basics.mdx",
+      "chapter": "AI・機械学習・深層学習の基礎",
+      "volume": "経営情報システム",
+      "order": 121
+    },
+    {
+      "file": "docs/management-information-systems/information-management.mdx",
+      "chapter": "経営情報管理",
+      "volume": "経営情報システム",
+      "order": 122
+    },
+    {
+      "file": "docs/management-information-systems/knowledge-it-strategy-and-dx.mdx",
+      "chapter": "IT戦略・BPR・DX・ITガバナンス",
+      "volume": "経営情報システム",
+      "order": 123
+    },
+    {
+      "file": "docs/management-information-systems/knowledge-systems-development-methods.mdx",
+      "chapter": "システム開発手法",
+      "volume": "経営情報システム",
+      "order": 124
+    },
+    {
+      "file": "docs/management-information-systems/knowledge-project-management.mdx",
+      "chapter": "プロジェクトマネジメント",
+      "volume": "経営情報システム",
+      "order": 125
+    },
+    {
+      "file": "docs/management-information-systems/knowledge-it-operations-and-audit.mdx",
+      "chapter": "運用管理・評価・監査",
+      "volume": "経営情報システム",
+      "order": 126
+    },
+    {
+      "file": "docs/management-information-systems/knowledge-outsourcing-and-decision-support.mdx",
+      "chapter": "外部資源活用と意思決定支援システム",
+      "volume": "経営情報システム",
+      "order": 127
+    },
+    {
+      "file": "docs/management-information-systems/knowledge-statistics-basics.mdx",
+      "chapter": "統計学の基礎",
+      "volume": "経営情報システム",
+      "order": 128
+    },
+    {
+      "file": "docs/management-information-systems/security-guidelines-and-related-laws.mdx",
+      "chapter": "情報セキュリティガイドラインと関連法規",
+      "volume": "経営情報システム",
+      "order": 129
+    },
+    {
+      "file": "docs/sme-management-and-policy/sme-management.mdx",
+      "chapter": "中小企業経営",
+      "volume": "中小企業経営・中小企業政策",
+      "order": 130
+    },
+    {
+      "file": "docs/sme-management-and-policy/knowledge-sme-definition-and-size-criteria.mdx",
+      "chapter": "中小企業の定義と規模別分類",
+      "volume": "中小企業経営・中小企業政策",
+      "order": 131
+    },
+    {
+      "file": "docs/sme-management-and-policy/knowledge-sme-economic-role-and-statistics.mdx",
+      "chapter": "中小企業の経済的役割と主要統計",
+      "volume": "中小企業経営・中小企業政策",
+      "order": 132
+    },
+    {
+      "file": "docs/sme-management-and-policy/knowledge-sme-management-issues.mdx",
+      "chapter": "中小企業の経営課題",
+      "volume": "中小企業経営・中小企業政策",
+      "order": 133
+    },
+    {
+      "file": "docs/sme-management-and-policy/knowledge-sme-industry-trends.mdx",
+      "chapter": "業種別の中小企業動向",
+      "volume": "中小企業経営・中小企業政策",
+      "order": 134
+    },
+    {
+      "file": "docs/sme-management-and-policy/knowledge-industrial-clusters.mdx",
+      "chapter": "産業集積と地域経済",
+      "volume": "中小企業経営・中小企業政策",
+      "order": 135
+    },
+    {
+      "file": "docs/sme-management-and-policy/knowledge-startup-and-closure-rates.mdx",
+      "chapter": "開業率と廃業率",
+      "volume": "中小企業経営・中小企業政策",
+      "order": 136
+    },
+    {
+      "file": "docs/sme-management-and-policy/knowledge-sme-white-paper-reading.mdx",
+      "chapter": "白書の読み方と頻出テーマ",
+      "volume": "中小企業経営・中小企業政策",
+      "order": 137
+    },
+    {
+      "file": "docs/sme-management-and-policy/sme-policy.mdx",
+      "chapter": "中小企業政策",
+      "volume": "中小企業経営・中小企業政策",
+      "order": 138
+    },
+    {
+      "file": "docs/sme-management-and-policy/policy-framework-and-basic-laws.mdx",
+      "chapter": "政策体系と基本法",
+      "volume": "中小企業経営・中小企業政策",
+      "order": 139
+    },
+    {
+      "file": "docs/sme-management-and-policy/policy-management-support.mdx",
+      "chapter": "経営支援施策",
+      "volume": "中小企業経営・中小企業政策",
+      "order": 140
+    },
+    {
+      "file": "docs/sme-management-and-policy/policy-financial-support.mdx",
+      "chapter": "金融支援施策",
+      "volume": "中小企業経営・中小企業政策",
+      "order": 141
+    },
+    {
+      "file": "docs/sme-management-and-policy/policy-major-subsidies.mdx",
+      "chapter": "主要補助金制度",
+      "volume": "中小企業経営・中小企業政策",
+      "order": 142
+    },
+    {
+      "file": "docs/sme-management-and-policy/policy-startup-support.mdx",
+      "chapter": "創業支援策",
+      "volume": "中小企業経営・中小企業政策",
+      "order": 143
+    },
+    {
+      "file": "docs/sme-management-and-policy/policy-business-succession-and-ma-support.mdx",
+      "chapter": "更新ノード 事業承継・M&A支援",
+      "volume": "中小企業経営・中小企業政策",
+      "order": 144
+    },
+    {
+      "file": "docs/sme-management-and-policy/policy-overseas-expansion-support.mdx",
+      "chapter": "海外展開支援",
+      "volume": "中小企業経営・中小企業政策",
+      "order": 145
+    },
+    {
+      "file": "docs/sme-management-and-policy/policy-fair-trade-and-small-business-support.mdx",
+      "chapter": "取引適正化と小規模事業者向け施策",
+      "volume": "中小企業経営・中小企業政策",
+      "order": 146
+    },
+    {
+      "file": "docs/sme-management-and-policy/policy-human-resources-and-employment-support.mdx",
+      "chapter": "人材・雇用支援施策",
+      "volume": "中小企業経営・中小企業政策",
+      "order": 147
+    },
+    {
+      "file": "docs/sme-management-and-policy/policy-bcp-and-disaster-recovery-support.mdx",
+      "chapter": "BCPと災害復旧支援",
+      "volume": "中小企業経営・中小企業政策",
+      "order": 148
+    },
+    {
+      "file": "docs/second-stage/overview.mdx",
+      "chapter": "2次試験の概要と解答プロセス",
+      "volume": "第2次試験",
+      "order": 149
+    },
+    {
+      "file": "docs/second-stage/reading-case-materials.mdx",
+      "chapter": "与件文の読み方",
+      "volume": "第2次試験",
+      "order": 150
+    },
+    {
+      "file": "docs/second-stage/interpreting-questions-and-structuring-answers.mdx",
+      "chapter": "設問解釈と答案構成",
+      "volume": "第2次試験",
+      "order": 151
+    },
+    {
+      "file": "docs/second-stage/logical-writing-techniques.mdx",
+      "chapter": "論理的記述の技術",
+      "volume": "第2次試験",
+      "order": 152
+    },
+    {
+      "file": "docs/second-stage/case-1-organization-and-hr.mdx",
+      "chapter": "事例Ⅰ 組織・人事",
+      "volume": "第2次試験",
+      "order": 153
+    },
+    {
+      "file": "docs/second-stage/case-1-question-patterns.mdx",
+      "chapter": "事例Ⅰの設問型",
+      "volume": "第2次試験",
+      "order": 154
+    },
+    {
+      "file": "docs/second-stage/case-1-answer-frameworks.mdx",
+      "chapter": "事例Ⅰの答案骨子",
+      "volume": "第2次試験",
+      "order": 155
+    },
+    {
+      "file": "docs/second-stage/case-2-marketing-and-distribution.mdx",
+      "chapter": "事例Ⅱ マーケティング・流通",
+      "volume": "第2次試験",
+      "order": 156
+    },
+    {
+      "file": "docs/second-stage/case-2-question-patterns.mdx",
+      "chapter": "事例Ⅱの設問型",
+      "volume": "第2次試験",
+      "order": 157
+    },
+    {
+      "file": "docs/second-stage/case-2-answer-frameworks.mdx",
+      "chapter": "事例Ⅱの答案骨子",
+      "volume": "第2次試験",
+      "order": 158
+    },
+    {
+      "file": "docs/second-stage/case-3-production-and-technology.mdx",
+      "chapter": "事例Ⅲ 生産・技術",
+      "volume": "第2次試験",
+      "order": 159
+    },
+    {
+      "file": "docs/second-stage/case-3-question-patterns.mdx",
+      "chapter": "事例Ⅲの設問型",
+      "volume": "第2次試験",
+      "order": 160
+    },
+    {
+      "file": "docs/second-stage/case-3-answer-frameworks.mdx",
+      "chapter": "事例Ⅲの答案骨子",
+      "volume": "第2次試験",
+      "order": 161
+    },
+    {
+      "file": "docs/second-stage/case-4-finance-and-accounting.mdx",
+      "chapter": "事例Ⅳ 財務・会計",
+      "volume": "第2次試験",
+      "order": 162
+    },
+    {
+      "file": "docs/second-stage/case-4-question-patterns.mdx",
+      "chapter": "事例Ⅳの設問型",
+      "volume": "第2次試験",
+      "order": 163
+    },
+    {
+      "file": "docs/second-stage/case-4-answer-frameworks.mdx",
+      "chapter": "事例Ⅳの答案骨子",
+      "volume": "第2次試験",
+      "order": 164
+    },
+    {
+      "file": "docs/second-stage/case-4-management-analysis.mdx",
+      "chapter": "事例Ⅳ 経営分析",
+      "volume": "第2次試験",
+      "order": 165
+    },
+    {
+      "file": "docs/second-stage/case-4-cvp-and-profit-planning.mdx",
+      "chapter": "事例Ⅳ CVP と利益計画",
+      "volume": "第2次試験",
+      "order": 166
+    },
+    {
+      "file": "docs/second-stage/case-4-cash-flow-and-working-capital.mdx",
+      "chapter": "事例Ⅳ CF と運転資本",
+      "volume": "第2次試験",
+      "order": 167
+    },
+    {
+      "file": "docs/second-stage/case-4-npv-and-investment-decision.mdx",
+      "chapter": "事例Ⅳ NPV と投資意思決定",
+      "volume": "第2次試験",
+      "order": 168
+    },
+    {
+      "file": "docs/past-exam-solutions/r07/economics.mdx",
+      "chapter": "経済学・経済政策（令和7年度）",
+      "volume": "過去問解説",
+      "order": 169
+    },
+    {
+      "file": "docs/past-exam-solutions/r07/finance.mdx",
+      "chapter": "財務・会計（令和7年度）",
+      "volume": "過去問解説",
+      "order": 170
+    },
+    {
+      "file": "docs/past-exam-solutions/r07/management.mdx",
+      "chapter": "企業経営理論（令和7年度）",
+      "volume": "過去問解説",
+      "order": 171
+    },
+    {
+      "file": "docs/past-exam-solutions/r07/operations.mdx",
+      "chapter": "運営管理（令和7年度）",
+      "volume": "過去問解説",
+      "order": 172
+    },
+    {
+      "file": "docs/past-exam-solutions/r07/business-law.mdx",
+      "chapter": "経営法務（令和7年度）",
+      "volume": "過去問解説",
+      "order": 173
+    },
+    {
+      "file": "docs/past-exam-solutions/r07/info-systems.mdx",
+      "chapter": "経営情報システム（令和7年度）",
+      "volume": "過去問解説",
+      "order": 174
+    },
+    {
+      "file": "docs/past-exam-solutions/r07/sme-policy.mdx",
+      "chapter": "中小企業経営・中小企業政策（令和7年度）",
+      "volume": "過去問解説",
+      "order": 175
+    },
+    {
+      "file": "docs/past-exam-solutions/r06/economics.mdx",
+      "chapter": "経済学・経済政策（令和6年度）",
+      "volume": "過去問解説",
+      "order": 176
+    },
+    {
+      "file": "docs/past-exam-solutions/r06/finance.mdx",
+      "chapter": "財務・会計（令和6年度）",
+      "volume": "過去問解説",
+      "order": 177
+    },
+    {
+      "file": "docs/past-exam-solutions/r06/management.mdx",
+      "chapter": "企業経営理論（令和6年度）",
+      "volume": "過去問解説",
+      "order": 178
+    },
+    {
+      "file": "docs/past-exam-solutions/r06/operations.mdx",
+      "chapter": "運営管理（令和6年度）",
+      "volume": "過去問解説",
+      "order": 179
+    },
+    {
+      "file": "docs/past-exam-solutions/r06/business-law.mdx",
+      "chapter": "経営法務（令和6年度）",
+      "volume": "過去問解説",
+      "order": 180
+    },
+    {
+      "file": "docs/past-exam-solutions/r06/info-systems.mdx",
+      "chapter": "経営情報システム（令和6年度）",
+      "volume": "過去問解説",
+      "order": 181
+    },
+    {
+      "file": "docs/past-exam-solutions/r06/sme-policy.mdx",
+      "chapter": "中小企業経営・中小企業政策（令和6年度）",
+      "volume": "過去問解説",
+      "order": 182
+    },
+    {
+      "file": "docs/past-exam-solutions/r05/economics.mdx",
+      "chapter": "経済学・経済政策（令和5年度）",
+      "volume": "過去問解説",
+      "order": 183
+    },
+    {
+      "file": "docs/past-exam-solutions/r05/finance.mdx",
+      "chapter": "財務・会計（令和5年度）",
+      "volume": "過去問解説",
+      "order": 184
+    },
+    {
+      "file": "docs/past-exam-solutions/r05/management.mdx",
+      "chapter": "企業経営理論（令和5年度）",
+      "volume": "過去問解説",
+      "order": 185
+    },
+    {
+      "file": "docs/past-exam-solutions/r05/operations.mdx",
+      "chapter": "運営管理（令和5年度）",
+      "volume": "過去問解説",
+      "order": 186
+    },
+    {
+      "file": "docs/past-exam-solutions/r05/business-law.mdx",
+      "chapter": "経営法務（令和5年度）",
+      "volume": "過去問解説",
+      "order": 187
+    },
+    {
+      "file": "docs/past-exam-solutions/r05/info-systems.mdx",
+      "chapter": "経営情報システム（令和5年度）",
+      "volume": "過去問解説",
+      "order": 188
+    },
+    {
+      "file": "docs/past-exam-solutions/r05/sme-policy.mdx",
+      "chapter": "中小企業経営・中小企業政策（令和5年度）",
+      "volume": "過去問解説",
+      "order": 189
+    },
+    {
+      "file": "docs/past-exam-solutions/r04/economics.mdx",
+      "chapter": "経済学・経済政策（令和4年度）",
+      "volume": "過去問解説",
+      "order": 190
+    },
+    {
+      "file": "docs/past-exam-solutions/r04/finance.mdx",
+      "chapter": "財務・会計（令和4年度）",
+      "volume": "過去問解説",
+      "order": 191
+    },
+    {
+      "file": "docs/past-exam-solutions/r04/management.mdx",
+      "chapter": "企業経営理論（令和4年度）",
+      "volume": "過去問解説",
+      "order": 192
+    },
+    {
+      "file": "docs/past-exam-solutions/r04/operations.mdx",
+      "chapter": "運営管理（令和4年度）",
+      "volume": "過去問解説",
+      "order": 193
+    },
+    {
+      "file": "docs/past-exam-solutions/r04/business-law.mdx",
+      "chapter": "経営法務（令和4年度）",
+      "volume": "過去問解説",
+      "order": 194
+    },
+    {
+      "file": "docs/past-exam-solutions/r04/info-systems.mdx",
+      "chapter": "経営情報システム（令和4年度）",
+      "volume": "過去問解説",
+      "order": 195
+    },
+    {
+      "file": "docs/past-exam-solutions/r04/sme-policy.mdx",
+      "chapter": "中小企業経営・中小企業政策（令和4年度）",
+      "volume": "過去問解説",
+      "order": 196
+    },
+    {
+      "file": "docs/past-exam-solutions/r03/economics.mdx",
+      "chapter": "経済学・経済政策（令和3年度）",
+      "volume": "過去問解説",
+      "order": 197
+    },
+    {
+      "file": "docs/past-exam-solutions/r03/finance.mdx",
+      "chapter": "財務・会計（令和3年度）",
+      "volume": "過去問解説",
+      "order": 198
+    },
+    {
+      "file": "docs/past-exam-solutions/r03/management.mdx",
+      "chapter": "企業経営理論（令和3年度）",
+      "volume": "過去問解説",
+      "order": 199
+    },
+    {
+      "file": "docs/past-exam-solutions/r03/operations.mdx",
+      "chapter": "運営管理（令和3年度）",
+      "volume": "過去問解説",
+      "order": 200
+    },
+    {
+      "file": "docs/past-exam-solutions/r03/business-law.mdx",
+      "chapter": "経営法務（令和3年度）",
+      "volume": "過去問解説",
+      "order": 201
+    },
+    {
+      "file": "docs/past-exam-solutions/r03/info-systems.mdx",
+      "chapter": "経営情報システム（令和3年度）",
+      "volume": "過去問解説",
+      "order": 202
+    },
+    {
+      "file": "docs/past-exam-solutions/r03/sme-policy.mdx",
+      "chapter": "中小企業経営・中小企業政策（令和3年度）",
+      "volume": "過去問解説",
+      "order": 203
+    },
+    {
+      "file": "docs/past-exam-solutions/r02/economics.mdx",
+      "chapter": "経済学・経済政策（令和2年度）",
+      "volume": "過去問解説",
+      "order": 204
+    },
+    {
+      "file": "docs/past-exam-solutions/r02/finance.mdx",
+      "chapter": "財務・会計（令和2年度）",
+      "volume": "過去問解説",
+      "order": 205
+    },
+    {
+      "file": "docs/past-exam-solutions/r02/management.mdx",
+      "chapter": "企業経営理論（令和2年度）",
+      "volume": "過去問解説",
+      "order": 206
+    },
+    {
+      "file": "docs/past-exam-solutions/r02/operations.mdx",
+      "chapter": "運営管理（令和2年度）",
+      "volume": "過去問解説",
+      "order": 207
+    },
+    {
+      "file": "docs/past-exam-solutions/r02/business-law.mdx",
+      "chapter": "経営法務（令和2年度）",
+      "volume": "過去問解説",
+      "order": 208
+    },
+    {
+      "file": "docs/past-exam-solutions/r02/info-systems.mdx",
+      "chapter": "経営情報システム（令和2年度）",
+      "volume": "過去問解説",
+      "order": 209
+    },
+    {
+      "file": "docs/past-exam-solutions/r02/sme-policy.mdx",
+      "chapter": "中小企業経営・中小企業政策（令和2年度）",
+      "volume": "過去問解説",
+      "order": 210
+    },
+    {
+      "file": "docs/past-exam-solutions/r01/economics.mdx",
+      "chapter": "経済学・経済政策（令和元年度）",
+      "volume": "過去問解説",
+      "order": 211
+    },
+    {
+      "file": "docs/past-exam-solutions/r01/finance.mdx",
+      "chapter": "財務・会計（令和元年度）",
+      "volume": "過去問解説",
+      "order": 212
+    },
+    {
+      "file": "docs/past-exam-solutions/r01/management.mdx",
+      "chapter": "企業経営理論（令和元年度）",
+      "volume": "過去問解説",
+      "order": 213
+    },
+    {
+      "file": "docs/past-exam-solutions/r01/operations.mdx",
+      "chapter": "運営管理（令和元年度）",
+      "volume": "過去問解説",
+      "order": 214
+    },
+    {
+      "file": "docs/past-exam-solutions/r01/business-law.mdx",
+      "chapter": "経営法務（令和元年度）",
+      "volume": "過去問解説",
+      "order": 215
+    },
+    {
+      "file": "docs/past-exam-solutions/r01/info-systems.mdx",
+      "chapter": "経営情報システム（令和元年度）",
+      "volume": "過去問解説",
+      "order": 216
+    },
+    {
+      "file": "docs/past-exam-solutions/r01/sme-policy.mdx",
+      "chapter": "中小企業経営・中小企業政策（令和元年度）",
+      "volume": "過去問解説",
+      "order": 217
+    },
+    {
+      "file": "docs/past-exam-solutions/h30/economics.mdx",
+      "chapter": "経済学・経済政策（平成30年度）",
+      "volume": "過去問解説",
+      "order": 218
+    },
+    {
+      "file": "docs/past-exam-solutions/h30/finance.mdx",
+      "chapter": "財務・会計（平成30年度）",
+      "volume": "過去問解説",
+      "order": 219
+    },
+    {
+      "file": "docs/past-exam-solutions/h30/management.mdx",
+      "chapter": "企業経営理論（平成30年度）",
+      "volume": "過去問解説",
+      "order": 220
+    },
+    {
+      "file": "docs/past-exam-solutions/h30/operations.mdx",
+      "chapter": "運営管理（平成30年度）",
+      "volume": "過去問解説",
+      "order": 221
+    },
+    {
+      "file": "docs/past-exam-solutions/h30/business-law.mdx",
+      "chapter": "経営法務（平成30年度）",
+      "volume": "過去問解説",
+      "order": 222
+    },
+    {
+      "file": "docs/past-exam-solutions/h30/info-systems.mdx",
+      "chapter": "経営情報システム（平成30年度）",
+      "volume": "過去問解説",
+      "order": 223
+    },
+    {
+      "file": "docs/past-exam-solutions/h30/sme-policy.mdx",
+      "chapter": "中小企業経営・中小企業政策（平成30年度）",
+      "volume": "過去問解説",
+      "order": 224
+    },
+    {
+      "file": "docs/past-exam-solutions/h29/economics.mdx",
+      "chapter": "経済学・経済政策（平成29年度）",
+      "volume": "過去問解説",
+      "order": 225
+    },
+    {
+      "file": "docs/past-exam-solutions/h29/finance.mdx",
+      "chapter": "財務・会計（平成29年度）",
+      "volume": "過去問解説",
+      "order": 226
+    },
+    {
+      "file": "docs/past-exam-solutions/h29/management.mdx",
+      "chapter": "企業経営理論（平成29年度）",
+      "volume": "過去問解説",
+      "order": 227
+    },
+    {
+      "file": "docs/past-exam-solutions/h29/operations.mdx",
+      "chapter": "運営管理（平成29年度）",
+      "volume": "過去問解説",
+      "order": 228
+    },
+    {
+      "file": "docs/past-exam-solutions/h29/business-law.mdx",
+      "chapter": "経営法務（平成29年度）",
+      "volume": "過去問解説",
+      "order": 229
+    },
+    {
+      "file": "docs/past-exam-solutions/h29/info-systems.mdx",
+      "chapter": "経営情報システム（平成29年度）",
+      "volume": "過去問解説",
+      "order": 230
+    },
+    {
+      "file": "docs/past-exam-solutions/h29/sme-policy.mdx",
+      "chapter": "中小企業経営・中小企業政策（平成29年度）",
+      "volume": "過去問解説",
+      "order": 231
+    },
+    {
+      "file": "docs/past-exam-solutions/h28/economics.mdx",
+      "chapter": "経済学・経済政策（平成28年度）",
+      "volume": "過去問解説",
+      "order": 232
+    },
+    {
+      "file": "docs/past-exam-solutions/h28/finance.mdx",
+      "chapter": "財務・会計（平成28年度）",
+      "volume": "過去問解説",
+      "order": 233
+    },
+    {
+      "file": "docs/past-exam-solutions/h28/management.mdx",
+      "chapter": "企業経営理論（平成28年度）",
+      "volume": "過去問解説",
+      "order": 234
+    },
+    {
+      "file": "docs/past-exam-solutions/h28/operations.mdx",
+      "chapter": "運営管理（平成28年度）",
+      "volume": "過去問解説",
+      "order": 235
+    },
+    {
+      "file": "docs/past-exam-solutions/h28/business-law.mdx",
+      "chapter": "経営法務（平成28年度）",
+      "volume": "過去問解説",
+      "order": 236
+    },
+    {
+      "file": "docs/past-exam-solutions/h28/info-systems.mdx",
+      "chapter": "経営情報システム（平成28年度）",
+      "volume": "過去問解説",
+      "order": 237
+    },
+    {
+      "file": "docs/past-exam-solutions/h28/sme-policy.mdx",
+      "chapter": "中小企業経営・中小企業政策（平成28年度）",
+      "volume": "過去問解説",
+      "order": 238
+    },
+    {
+      "file": "docs/past-exam-solutions/h27/economics.mdx",
+      "chapter": "経済学・経済政策（平成27年度）",
+      "volume": "過去問解説",
+      "order": 239
+    },
+    {
+      "file": "docs/past-exam-solutions/h27/finance.mdx",
+      "chapter": "財務・会計（平成27年度）",
+      "volume": "過去問解説",
+      "order": 240
+    },
+    {
+      "file": "docs/past-exam-solutions/h27/management.mdx",
+      "chapter": "企業経営理論（平成27年度）",
+      "volume": "過去問解説",
+      "order": 241
+    },
+    {
+      "file": "docs/past-exam-solutions/h27/operations.mdx",
+      "chapter": "運営管理（平成27年度）",
+      "volume": "過去問解説",
+      "order": 242
+    },
+    {
+      "file": "docs/past-exam-solutions/h27/business-law.mdx",
+      "chapter": "経営法務（平成27年度）",
+      "volume": "過去問解説",
+      "order": 243
+    },
+    {
+      "file": "docs/past-exam-solutions/h27/info-systems.mdx",
+      "chapter": "経営情報システム（平成27年度（2015））",
+      "volume": "過去問解説",
+      "order": 244
+    },
+    {
+      "file": "docs/past-exam-solutions/h27/sme-policy.mdx",
+      "chapter": "中小企業経営・中小企業政策（平成27年度）",
+      "volume": "過去問解説",
+      "order": 245
+    },
+    {
+      "file": "docs/past-exam-solutions/h26/economics.mdx",
+      "chapter": "経済学・経済政策（平成26年度）",
+      "volume": "過去問解説",
+      "order": 246
+    },
+    {
+      "file": "docs/past-exam-solutions/h26/finance.mdx",
+      "chapter": "財務・会計（平成26年度）",
+      "volume": "過去問解説",
+      "order": 247
+    },
+    {
+      "file": "docs/past-exam-solutions/h26/management.mdx",
+      "chapter": "企業経営理論（平成26年度）",
+      "volume": "過去問解説",
+      "order": 248
+    },
+    {
+      "file": "docs/past-exam-solutions/h26/operations.mdx",
+      "chapter": "運営管理（平成26年度）",
+      "volume": "過去問解説",
+      "order": 249
+    },
+    {
+      "file": "docs/past-exam-solutions/h26/business-law.mdx",
+      "chapter": "経営法務（平成26年度）",
+      "volume": "過去問解説",
+      "order": 250
+    },
+    {
+      "file": "docs/past-exam-solutions/h26/info-systems.mdx",
+      "chapter": "経営情報システム（平成26年度）",
+      "volume": "過去問解説",
+      "order": 251
+    },
+    {
+      "file": "docs/past-exam-solutions/h26/sme-policy.mdx",
+      "chapter": "中小企業経営・中小企業政策（平成26年度）",
+      "volume": "過去問解説",
+      "order": 252
+    },
+    {
+      "file": "docs/past-exam-solutions/h25/economics.mdx",
+      "chapter": "経済学・経済政策（平成25年度）",
+      "volume": "過去問解説",
+      "order": 253
+    },
+    {
+      "file": "docs/past-exam-solutions/h25/finance.mdx",
+      "chapter": "財務・会計（平成25年度）",
+      "volume": "過去問解説",
+      "order": 254
+    },
+    {
+      "file": "docs/past-exam-solutions/h25/management.mdx",
+      "chapter": "企業経営理論（平成25年度）",
+      "volume": "過去問解説",
+      "order": 255
+    },
+    {
+      "file": "docs/past-exam-solutions/h25/operations.mdx",
+      "chapter": "運営管理（平成25年度）",
+      "volume": "過去問解説",
+      "order": 256
+    },
+    {
+      "file": "docs/past-exam-solutions/h25/business-law.mdx",
+      "chapter": "経営法務（平成25年度）",
+      "volume": "過去問解説",
+      "order": 257
+    },
+    {
+      "file": "docs/past-exam-solutions/h25/info-systems.mdx",
+      "chapter": "経営情報システム（平成25年度）",
+      "volume": "過去問解説",
+      "order": 258
+    },
+    {
+      "file": "docs/past-exam-solutions/h25/sme-policy.mdx",
+      "chapter": "中小企業経営・中小企業政策（平成25年度）",
+      "volume": "過去問解説",
+      "order": 259
+    },
+    {
+      "file": "docs/past-exam-solutions/h24/economics.mdx",
+      "chapter": "経済学・経済政策（平成24年度）",
+      "volume": "過去問解説",
+      "order": 260
+    },
+    {
+      "file": "docs/past-exam-solutions/h24/finance.mdx",
+      "chapter": "財務・会計（平成24年度）",
+      "volume": "過去問解説",
+      "order": 261
+    },
+    {
+      "file": "docs/past-exam-solutions/h24/management.mdx",
+      "chapter": "企業経営理論（平成24年度）",
+      "volume": "過去問解説",
+      "order": 262
+    },
+    {
+      "file": "docs/past-exam-solutions/h24/operations.mdx",
+      "chapter": "運営管理（平成24年度）",
+      "volume": "過去問解説",
+      "order": 263
+    },
+    {
+      "file": "docs/past-exam-solutions/h24/business-law.mdx",
+      "chapter": "経営法務（平成24年度）",
+      "volume": "過去問解説",
+      "order": 264
+    },
+    {
+      "file": "docs/past-exam-solutions/h24/info-systems.mdx",
+      "chapter": "経営情報システム（平成24年度）",
+      "volume": "過去問解説",
+      "order": 265
+    },
+    {
+      "file": "docs/past-exam-solutions/h24/sme-policy.mdx",
+      "chapter": "中小企業経営・中小企業政策（平成24年度）",
+      "volume": "過去問解説",
+      "order": 266
+    },
+    {
+      "file": "docs/past-exam-solutions/h23/economics.mdx",
+      "chapter": "経済学・経済政策（平成23年度）",
+      "volume": "過去問解説",
+      "order": 267
+    },
+    {
+      "file": "docs/past-exam-solutions/h23/finance.mdx",
+      "chapter": "財務・会計（平成23年度）",
+      "volume": "過去問解説",
+      "order": 268
+    },
+    {
+      "file": "docs/past-exam-solutions/h23/management.mdx",
+      "chapter": "企業経営理論（平成23年度）",
+      "volume": "過去問解説",
+      "order": 269
+    },
+    {
+      "file": "docs/past-exam-solutions/h23/operations.mdx",
+      "chapter": "運営管理（平成23年度）",
+      "volume": "過去問解説",
+      "order": 270
+    },
+    {
+      "file": "docs/past-exam-solutions/h23/business-law.mdx",
+      "chapter": "経営法務（平成23年度）",
+      "volume": "過去問解説",
+      "order": 271
+    },
+    {
+      "file": "docs/past-exam-solutions/h23/info-systems.mdx",
+      "chapter": "経営情報システム（平成23年度）",
+      "volume": "過去問解説",
+      "order": 272
+    },
+    {
+      "file": "docs/past-exam-solutions/h23/sme-policy.mdx",
+      "chapter": "中小企業経営・中小企業政策（平成23年度）",
+      "volume": "過去問解説",
+      "order": 273
+    },
+    {
+      "file": "docs/past-exam-solutions/h22/economics.mdx",
+      "chapter": "経済学・経済政策（平成22年度）",
+      "volume": "過去問解説",
+      "order": 274
+    },
+    {
+      "file": "docs/past-exam-solutions/h22/finance.mdx",
+      "chapter": "財務・会計（平成22年度）",
+      "volume": "過去問解説",
+      "order": 275
+    },
+    {
+      "file": "docs/past-exam-solutions/h22/management.mdx",
+      "chapter": "企業経営理論（平成22年度）",
+      "volume": "過去問解説",
+      "order": 276
+    },
+    {
+      "file": "docs/past-exam-solutions/h22/operations.mdx",
+      "chapter": "運営管理（平成22年度）",
+      "volume": "過去問解説",
+      "order": 277
+    },
+    {
+      "file": "docs/past-exam-solutions/h22/business-law.mdx",
+      "chapter": "経営法務（平成22年度）",
+      "volume": "過去問解説",
+      "order": 278
+    },
+    {
+      "file": "docs/past-exam-solutions/h22/info-systems.mdx",
+      "chapter": "経営情報システム（平成22年度）",
+      "volume": "過去問解説",
+      "order": 279
+    },
+    {
+      "file": "docs/past-exam-solutions/h22/sme-policy.mdx",
+      "chapter": "中小企業経営・中小企業政策（平成22年度）",
+      "volume": "過去問解説",
+      "order": 280
+    },
+    {
+      "file": "docs/past-exam-solutions/h21/economics.mdx",
+      "chapter": "経済学・経済政策（平成21年度）",
+      "volume": "過去問解説",
+      "order": 281
+    },
+    {
+      "file": "docs/past-exam-solutions/h21/finance.mdx",
+      "chapter": "財務・会計（平成21年度）",
+      "volume": "過去問解説",
+      "order": 282
+    },
+    {
+      "file": "docs/past-exam-solutions/h21/management.mdx",
+      "chapter": "企業経営理論（平成21年度）",
+      "volume": "過去問解説",
+      "order": 283
+    },
+    {
+      "file": "docs/past-exam-solutions/h21/operations.mdx",
+      "chapter": "運営管理（平成21年度）",
+      "volume": "過去問解説",
+      "order": 284
+    },
+    {
+      "file": "docs/past-exam-solutions/h21/business-law.mdx",
+      "chapter": "経営法務（平成21年度）",
+      "volume": "過去問解説",
+      "order": 285
+    },
+    {
+      "file": "docs/past-exam-solutions/h21/info-systems.mdx",
+      "chapter": "経営情報システム（平成21年度）",
+      "volume": "過去問解説",
+      "order": 286
+    },
+    {
+      "file": "docs/past-exam-solutions/h21/sme-policy.mdx",
+      "chapter": "中小企業経営・中小企業政策（平成21年度）",
+      "volume": "過去問解説",
+      "order": 287
+    },
+    {
+      "file": "docs/past-exam-solutions/h20/economics.mdx",
+      "chapter": "経済学・経済政策（平成20年度）",
+      "volume": "過去問解説",
+      "order": 288
+    },
+    {
+      "file": "docs/past-exam-solutions/h20/finance.mdx",
+      "chapter": "財務・会計（平成20年度）",
+      "volume": "過去問解説",
+      "order": 289
+    },
+    {
+      "file": "docs/past-exam-solutions/h20/management.mdx",
+      "chapter": "企業経営理論（平成20年度）",
+      "volume": "過去問解説",
+      "order": 290
+    },
+    {
+      "file": "docs/past-exam-solutions/h20/operations.mdx",
+      "chapter": "運営管理（平成20年度）",
+      "volume": "過去問解説",
+      "order": 291
+    },
+    {
+      "file": "docs/past-exam-solutions/h20/business-law.mdx",
+      "chapter": "経営法務（平成20年度）",
+      "volume": "過去問解説",
+      "order": 292
+    },
+    {
+      "file": "docs/past-exam-solutions/h20/info-systems.mdx",
+      "chapter": "経営情報システム（平成20年度）",
+      "volume": "過去問解説",
+      "order": 293
+    },
+    {
+      "file": "docs/past-exam-solutions/h20/sme-policy.mdx",
+      "chapter": "中小企業経営・中小企業政策（平成20年度）",
+      "volume": "過去問解説",
+      "order": 294
+    },
+    {
+      "file": "docs/past-exam-solutions/h19/economics.mdx",
+      "chapter": "経済学・経済政策（平成19年度）",
+      "volume": "過去問解説",
+      "order": 295
+    },
+    {
+      "file": "docs/past-exam-solutions/h19/finance.mdx",
+      "chapter": "財務・会計（平成19年度）",
+      "volume": "過去問解説",
+      "order": 296
+    },
+    {
+      "file": "docs/past-exam-solutions/h19/management.mdx",
+      "chapter": "企業経営理論（平成19年度）",
+      "volume": "過去問解説",
+      "order": 297
+    },
+    {
+      "file": "docs/past-exam-solutions/h19/operations.mdx",
+      "chapter": "運営管理（平成19年度）",
+      "volume": "過去問解説",
+      "order": 298
+    },
+    {
+      "file": "docs/past-exam-solutions/h19/business-law.mdx",
+      "chapter": "経営法務（平成19年度）",
+      "volume": "過去問解説",
+      "order": 299
+    },
+    {
+      "file": "docs/past-exam-solutions/h19/info-systems.mdx",
+      "chapter": "経営情報システム（平成19年度）",
+      "volume": "過去問解説",
+      "order": 300
+    },
+    {
+      "file": "docs/past-exam-solutions/h19/sme-policy.mdx",
+      "chapter": "中小企業経営・中小企業政策（平成19年度）",
+      "volume": "過去問解説",
+      "order": 301
+    },
+    {
+      "file": "docs/reference/exam-guide.mdx",
+      "chapter": "受験ガイド",
+      "volume": "参照資料",
+      "order": 302
+    },
+    {
+      "file": "docs/reference/past-exam-archive.mdx",
+      "chapter": "過去問アーカイブ",
+      "volume": "参照資料",
+      "order": 303
+    },
+    {
+      "file": "docs/reference/second-stage-question-index.mdx",
+      "chapter": "第2次試験 設問索引",
+      "volume": "参照資料",
+      "order": 304
+    },
+    {
+      "file": "docs/reference/past-question-theme-index.mdx",
+      "chapter": "過去問テーマ索引",
+      "volume": "参照資料",
+      "order": 305
+    },
+    {
+      "file": "docs/reference/yearly-question-trends.mdx",
+      "chapter": "年度別出題傾向",
+      "volume": "参照資料",
+      "order": 306
+    },
+    {
+      "file": "docs/reference/exam-prediction-2026.mdx",
+      "chapter": "令和8年度（2026）出題予測",
+      "volume": "参照資料",
+      "order": 307
+    },
+    {
+      "file": "docs/reference/important-terms-glossary.mdx",
+      "chapter": "重要用語集",
+      "volume": "参照資料",
+      "order": 308
+    },
+    {
+      "file": "docs/reference/important-formulas.mdx",
+      "chapter": "重要公式・計算式一覧",
+      "volume": "参照資料",
+      "order": 309
+    },
+    {
+      "file": "docs/reference/study-time-model.mdx",
+      "chapter": "学習時間モデル",
+      "volume": "参照資料",
+      "order": 310
+    }
+  ]
+}

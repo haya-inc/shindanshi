@@ -48,3 +48,6 @@ next-env.d.ts
 
 .pnpm-store/
 .link-cache.json
+.next-h23-verify/
+refine-logs/
+content/refine-loop-logs/

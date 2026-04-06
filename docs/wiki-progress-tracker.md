@@ -37,7 +37,7 @@
 | 第5章 原価計算 | `/finance-and-accounting/cost-accounting` | 安定論点 | 公開済み | `G1-G5` | 仕損・減損、配合差異、勘定連絡の応用問題を追加する |
 | 第6章 経営分析 | `/finance-and-accounting/management-analysis` | 安定論点 | 公開済み | `G1-G5` | 新規ノードへ比較問題と事例Ⅳの指標選定例を追加する |
 | 第7章 利益と資金の管理 | `/finance-and-accounting/profit-and-cash-management` | 安定論点 | 公開済み | `G1-G5` | 新規ノードへ予算実績差異と月次資金繰りの例題を追加する |
-| 第8章 ファイナンス | `/finance-and-accounting/finance` | 安定論点 | 公開済み | `G1-G5` | `プット＝コール・パリティ / 二項モデル / オプション価格` の前提、計算手順、使いどころの違いを一目で戻れる比較を補強する |
+| 第8章 ファイナンス | `/finance-and-accounting/finance` | 安定論点 | 公開済み | `G1-G5` | `相関係数 / 共分散 / β / 標準偏差` の役割差と `ポートフォリオ理論 / CAPM` との関係を一目で戻れる比較を補強する |
 | 第9章 経営戦略論 | `/business-management-theory/management-strategy` | 安定論点 | 公開済み | `G1-G5` | SWOT、PPM、5フォース、VRIO、国際経営の比較問題を増やす |
 | 第10章 組織論 | `/business-management-theory/organization-theory` | 安定論点 | 公開済み | `G1-G5` | 新規ノードへ比較問題と事例Ⅰ型の例題を追加する |
 | 第11章 マーケティング論 | `/business-management-theory/marketing` | 安定論点 | 公開済み | `G1-G5` | STP、調査、製品価格、チャネル、CRM の比較問題を増やす |
@@ -156,12 +156,12 @@
 | Webテクノロジーとクラウド | `/management-information-systems/knowledge-web-and-cloud` | 安定論点 | 公開済み | `G1-G5` | `GraphQL / PWA / DaaS / VDI / コミュニティクラウド` の比較問題を増やす |
 | 情報セキュリティの基礎 | `/management-information-systems/knowledge-information-security-basics` | 安定論点 | 公開済み | `G1-G5` | `WAF / CSP / SameSite / X-Frame-Options / EPP-EDR-DLP / テレワーク方式` を年度別の言い換えで継続補強する |
 | AI・機械学習の基礎 | `/management-information-systems/knowledge-ai-and-machine-learning-basics` | 安定論点 | 公開済み | `G1-G5` | `混同行列 / ROC-PR比較 / 回帰指標計算 / 時系列特徴量 / データリーク` を年度別の言い換えで継続補強する |
-| IT戦略・BPR・DX | `/management-information-systems/knowledge-it-strategy-and-dx` | 安定論点 | 公開済み | `G1-G5` | `h24` の 25問復元、`h28` のクラウド比較軸、`h26 / h29` の第21〜23問再監査は完了。次は `h24 第25問` の原版確認と、今回の比較軸を知識ノードの確認問題へ逆流する |
+| IT戦略・BPR・DX | `/management-information-systems/knowledge-it-strategy-and-dx` | 安定論点 | 公開済み | `G1-G5` | `h24 第25問` は問題冊子と正答表の食い違いを確認し注記まで反映した。次は `EA / ITポートフォリオ / 投資評価 / SLA` の確認問題を年度別の言い換えで増やす |
 | システム開発手法 | `/management-information-systems/knowledge-systems-development-methods` | 安定論点 | 公開済み | `G1-G5` | `見積手法 / OSS ライセンス / オブジェクト指向 / 移行用語` を含む比較問題と年度別誤答例を増やす |
-| プロジェクトマネジメント | `/management-information-systems/knowledge-project-management` | 安定論点 | 公開済み | `G1-G5` | `見積手法 / リスク / スクラム役割 / クリティカルパス` の比較問題を追加する |
-| 運用管理・評価・監査 | `/management-information-systems/knowledge-it-operations-and-audit` | 安定論点 | 公開済み | `G1-G5` | `ITSMS / ISMS / フェールセーフ / 冗長化形態 / RASIS` の比較問題を増やす |
+| プロジェクトマネジメント | `/management-information-systems/knowledge-project-management` | 安定論点 | 公開済み | `G1-G5` | `CPI / SPI` の文章判定は補強済み。次は `見積手法 / リスク / スクラム役割 / クリティカルパス` の比較問題を増やす |
+| 運用管理・評価・監査 | `/management-information-systems/knowledge-it-operations-and-audit` | 安定論点 | 公開済み | `G1-G5` | `ITSMS 認証` と `高回復力システム` の比較問題は補強済み。次は `フェールセーフ / 冗長化形態 / RASIS` の比較問題を増やす |
 | 外部資源活用と意思決定支援 | `/management-information-systems/knowledge-outsourcing-and-decision-support` | 安定論点 | 公開済み | `G1-G5` | `MOLAP / HOLAP / ROLAP / TPS-MIS-DSS-SIS-EIS / IoT-エッジ` の比較問題を追加する |
-| 統計学の基礎 | `/management-information-systems/knowledge-statistics-basics` | 安定論点 | 公開済み | `G1-G5` | `代表値 / ばらつき / 相関 / 回帰 / 検定` の比較問題を補強する |
+| 統計学の基礎 | `/management-information-systems/knowledge-statistics-basics` | 安定論点 | 公開済み | `G1-G5` | `重相関係数 / 調整済み決定係数 / 検定手法` の比較問題は補強済み。次は `代表値 / ばらつき / 相関 / 回帰 / 検定` の残り論点を年度別の言い換えで増やす |
 | 更新ノード 情報セキュリティガイドラインと関連法規 | `/management-information-systems/security-guidelines-and-related-laws` | 更新論点 | 公開済み | `G1-G6` | `法規 / ガイドライン / 脅威動向` の比較表を補強し、年次更新を続ける |
 
 ### 中小企業経営のノード
@@ -213,7 +213,7 @@
 | 効率的市場仮説 | `/finance-and-accounting/finance-efficient-market-hypothesis` | 安定論点 | 公開済み | `G1-G5` | `相関係数 / 共分散 / β / 標準偏差` の役割差と `ポートフォリオ理論 / CAPM` との関係を一問で横断できる比較を補強する |
 | マルチプル法 | `/finance-and-accounting/finance-multiples-valuation` | 安定論点 | 公開済み | `G1-G5` | `割引超過利益モデル` と `配当割引モデル` の比較、類似企業選定の判断問題を補強する |
 | MM理論と配当政策 | `/finance-and-accounting/finance-mm-and-dividend-policy` | 安定論点 | 公開済み | `G1-G5` | `配当割引モデル`、`残余配当政策`、`自社株買い` の比較問題を補強する |
-| デリバティブとリスク管理 | `/finance-and-accounting/finance-derivatives-risk-management` | 安定論点 | 公開済み | `G1-G5` | `プット＝コール・パリティ` と `二項モデル` の計算手順、使いどころ、前提の違いを比較問題で補強する |
+| デリバティブとリスク管理 | `/finance-and-accounting/finance-derivatives-risk-management` | 安定論点 | 公開済み | `G1-G5` | `プット＝コール・パリティ` の不成立から裁定機会を読む問題と、`二項モデル` の複製ポートフォリオの見方を補強する |
 
 ### 原価計算のノードと出題ノード
 
@@ -233,7 +233,7 @@
 | 原価計算 演習ノード 基本確認問題 | `/finance-and-accounting/cost-accounting-practice-basic-check` | 安定論点 | 公開済み | `G1-G5` | 総合原価計算の仕損・減損と配合差異の応用問題を追加する |
 | 経営分析 演習ノード 基本確認問題 | `/finance-and-accounting/management-analysis-practice-basic-check` | 安定論点 | 公開済み | `G1-G5` | セールスミックス、時系列比較、与件根拠つきの指標選定を追加する |
 | 利益と資金の管理 演習ノード 基本確認問題 | `/finance-and-accounting/profit-and-cash-management-practice-basic-check` | 安定論点 | 公開済み | `G1-G5` | 経常収支比率と短期借入依存度を含む月次資金繰り問題を追加する |
-| ファイナンス 演習ノード 基本確認問題 | `/finance-and-accounting/finance-practice-basic-check` | 安定論点 | 公開済み | `G1-G5` | `プット＝コール・パリティ / 二項モデル / オプション価格` の違いを一問でつなぐ総合問題を追加する |
+| ファイナンス 演習ノード 基本確認問題 | `/finance-and-accounting/finance-practice-basic-check` | 安定論点 | 公開済み | `G1-G5` | `相関係数 / 共分散 / β / 標準偏差` の違いと `ポートフォリオ理論 / CAPM` を一問でつなぐ総合問題を追加する |
 
 ## 第2次試験
 

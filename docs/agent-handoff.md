@@ -79,7 +79,7 @@
 - レビュー対象は、まず `content/docs` のコア本文 `201ページ`
 - `content/docs/past-exam-solutions` の `153ページ` は、入口、科目トップ、章ハブ、主要ノードの通読が一巡したあとに後段で着手
 - `入口フェーズ` は、`content/docs/index.mdx`、`content/docs/reference/exam-guide.mdx`、`content/docs/reference/index.mdx`、`content/docs/second-stage/index.mdx`、`content/docs/economics-and-economic-policy/index.mdx`、`content/docs/finance-and-accounting/index.mdx`、`content/docs/business-management-theory/index.mdx`、`content/docs/operations-management/index.mdx`、`content/docs/business-law/index.mdx`、`content/docs/management-information-systems/index.mdx`、`content/docs/sme-management-and-policy/index.mdx` の通過で完了
-- `章ハブ・事例ハブフェーズ` に入り、`content/docs/economics-and-economic-policy/microeconomics.mdx`、`content/docs/economics-and-economic-policy/macroeconomics.mdx`、`content/docs/finance-and-accounting/bookkeeping-basics.mdx`、`content/docs/finance-and-accounting/corporate-accounting-basics.mdx`、`content/docs/finance-and-accounting/cost-accounting.mdx`、`content/docs/finance-and-accounting/management-analysis.mdx`、`content/docs/finance-and-accounting/profit-and-cash-management.mdx`、`content/docs/finance-and-accounting/finance.mdx`、`content/docs/second-stage/case-4-finance-and-accounting.mdx`、`content/docs/second-stage/case-1-organization-and-hr.mdx`、`content/docs/second-stage/case-2-marketing-and-distribution.mdx`、`content/docs/second-stage/case-3-production-and-technology.mdx`、`content/docs/business-management-theory/management-strategy.mdx`、`content/docs/business-management-theory/organization-theory.mdx` は通過済み、次は `content/docs/business-management-theory/marketing.mdx`
+- `章ハブ・事例ハブフェーズ` に入り、`content/docs/economics-and-economic-policy/microeconomics.mdx`、`content/docs/economics-and-economic-policy/macroeconomics.mdx`、`content/docs/finance-and-accounting/bookkeeping-basics.mdx`、`content/docs/finance-and-accounting/corporate-accounting-basics.mdx`、`content/docs/finance-and-accounting/cost-accounting.mdx`、`content/docs/finance-and-accounting/management-analysis.mdx`、`content/docs/finance-and-accounting/profit-and-cash-management.mdx`、`content/docs/finance-and-accounting/finance.mdx`、`content/docs/second-stage/case-4-finance-and-accounting.mdx`、`content/docs/second-stage/case-1-organization-and-hr.mdx`、`content/docs/second-stage/case-2-marketing-and-distribution.mdx`、`content/docs/second-stage/case-3-production-and-technology.mdx`、`content/docs/business-management-theory/management-strategy.mdx`、`content/docs/business-management-theory/organization-theory.mdx`、`content/docs/business-management-theory/marketing.mdx` は通過済み、次は `content/docs/operations-management/production-planning.mdx`
 
 ## 5. 今すぐ着手しやすい次の作業
 
@@ -93,8 +93,8 @@
 
 ### 5.1 初学者通読レビューで次にやること
 
-1. [wiki-beginner-review-tracker.md](docs/wiki-beginner-review-tracker.md) の順番どおりに `マーケティング論` 章ハブを読む
-2. `市場選定 → 顧客理解 → 価値設計 → 届け方 → 関係維持` の順と、`初めて読むならこの順`、`テーマ → まず戻るページ`、`次に読むページ` が同じ学習導線になっているかを確認する
+1. [wiki-beginner-review-tracker.md](docs/wiki-beginner-review-tracker.md) の順番どおりに `生産管理 プランニング` 章ハブを読む
+2. `生産方式 → 計画統制 → 在庫 / 品質 → IE` の順と、`初めて読むならこの順`、`テーマ → まず戻るページ`、`次に読むページ` が同じ学習導線になっているかを確認する
 3. 読み終えたら、`最後に読んだページ`、`次に読むページ`、`今回の学び` を台帳へ追記する
 
 ## 6. 既存の良い型
@@ -172,6 +172,8 @@
 `pnpm validate` の前に `.next-devcheck` が残っていると、`pnpm format:check` が生成物まで拾って大量 warning で止まります。dev fallback を使ったあとに validate を回し直すときは、先に `rm -rf .next-devcheck` を入れてください。
 
 `.next-check-webpack` が壊れた cache pack を含んだまま残っていると、`pnpm format:check` が `Unable to read file ".next-check-webpack/cache/webpack/...1.pack_"`、`Invalid string length` で止まることがあります。この場合も、validate を回し直す前に `rm -rf .next-check-webpack` を入れてください。
+
+`.next-h25-verify` のような手作業検証用の dist dir が残っていると、`pnpm format:check` がその配下の `dev/server/chunks/...` を大量に拾って warning だらけで止まります。`prettier --check .` を含む検証を回す前に、不要なら `rm -rf .next-h25-verify` も先に入れてください。
 
 ### 9.2 表示確認の注意
 

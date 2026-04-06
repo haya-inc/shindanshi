@@ -108,7 +108,7 @@
 | 8.2 投資決定 | `/docs/finance-and-accounting/finance-profitability-index` | 独立ノードあり | `調査 / 延期 / 拡張 / 撤退` を含むデシジョンツリー応用問題を増やす |
 | 8.3 証券投資論 | `/docs/finance-and-accounting/finance-efficient-market-hypothesis` | 独立ノードあり | `相関係数 / 共分散 / β / 標準偏差` の役割差と `ポートフォリオ理論 / CAPM` との関係を一目で戻れる比較を補う |
 | 8.4 企業価値評価 | `/docs/finance-and-accounting/finance-multiples-valuation` | 独立ノードあり | `割引超過利益モデル / DDM / EV/EBITDA` の使い分けと類似企業選定の判断問題を増やす |
-| 8.5 デリバティブとリスク管理 | `/docs/finance-and-accounting/finance-derivatives-risk-management` | 独立ノードあり | `プット＝コール・パリティ` と `二項モデル` の計算手順、使いどころ、前提の違いを比較問題で補う |
+| 8.5 デリバティブとリスク管理 | `/docs/finance-and-accounting/finance-derivatives-risk-management` | 独立ノードあり | `プット＝コール・パリティ` の不成立から裁定機会を読む問題と、`二項モデル` の複製ポートフォリオの見方を補う |
 
 ### 第9章 経営戦略論
 
@@ -234,12 +234,12 @@
 
 | 細目 | 現在の主な対応ページ | 状態 | 次に必要なこと |
 | --- | --- | --- | --- |
-| 19.1 経営戦略と情報システム | `/docs/management-information-systems/knowledge-it-strategy-and-dx` | 独立ノードあり | `h24` の 25問復元、`h28` のクラウド比較軸、`h26 / h29` の第21〜23問再監査は完了。次は `h24 第25問` の原版確認と、今回の比較軸を知識ノードの確認問題へ逆流する |
+| 19.1 経営戦略と情報システム | `/docs/management-information-systems/knowledge-it-strategy-and-dx` | 独立ノードあり | `h24 第25問` は問題冊子と正答表の食い違いを確認し注記まで反映した。次は `EA / ITポートフォリオ / 投資評価 / SLA` の比較問題を増やす |
 | 19.2 システム開発 | `/docs/management-information-systems/knowledge-systems-development-methods` | 独立ノードあり | `見積手法 / OSS ライセンス / オブジェクト指向 / 移行用語` の比較問題を増やす |
-| 19.3 システムの運用管理と評価 | `/docs/management-information-systems/knowledge-it-operations-and-audit` | 独立ノードあり | `ITSMS / ISMS / フェールセーフ / 冗長化形態 / RASIS` の比較問題を増やす |
+| 19.3 システムの運用管理と評価 | `/docs/management-information-systems/knowledge-it-operations-and-audit` | 独立ノードあり | `ITSMS 認証` と `高回復力システム` は補強済み。次は `フェールセーフ / 冗長化形態 / RASIS` の比較問題を増やす |
 | 19.4 外部情報システム資源の活用 | `/docs/management-information-systems/knowledge-outsourcing-and-decision-support` | 独立ノードあり | `アウトソーシング / モデル契約 / SaaS / PaaS / IaaS` の比較問題を増やす |
 | 19.5 情報システムと意思決定 | `/docs/management-information-systems/knowledge-outsourcing-and-decision-support` | 独立ノードあり | `MOLAP / HOLAP / ROLAP / TPS-MIS-DSS-SIS-EIS / IoT-エッジ` の比較問題を増やす |
-| 19.6 統計学の基礎 | `/docs/management-information-systems/knowledge-statistics-basics` | 独立ノードあり | `代表値 / ばらつき / 相関 / 回帰 / 検定` の比較問題を増やす |
+| 19.6 統計学の基礎 | `/docs/management-information-systems/knowledge-statistics-basics` | 独立ノードあり | `重相関係数 / 調整済み決定係数 / 検定手法` の比較問題は補強済み。次は `代表値 / ばらつき / 相関 / 回帰 / 検定` の残り論点を増やす |
 | 19.7 情報セキュリティガイドラインと関連法規 | `/docs/management-information-systems/security-guidelines-and-related-laws` | 独立ノードあり | `法規 / ガイドライン / 脅威動向` の比較問題と更新確認を続ける |
 
 ### 第20章 中小企業経営
